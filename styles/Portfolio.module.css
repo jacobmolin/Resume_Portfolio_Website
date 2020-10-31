@@ -1,0 +1,17 @@
+.projWrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.project {
+    max-width: 400px;
+    width: 50%;
+    padding: 1rem;
+}
+
+.headerImage {
+    width: 6rem;
+    height: 6rem;
+}

@@ -5,43 +5,46 @@ import { useEffect, useRef, useState } from 'react'
 
 const glowLightWidth = 0.1
 
-export default function Navbar() {
+function Navbar() {
     const router = useRouter()
-    const currLink = useRef(null)
     const homeLink = useRef(null)
     const resumeLink = useRef(null)
     const portfolioLink = useRef(null)
     const funstuffLink = useRef(null)
     const headerRef = useRef(null)
+    let box
+    const [resize, setResize] = useState(0)
     const [pos, setPos] = useState(0)
 
     useEffect(() => {
-        if (currLink.current != null) {
-            const offset = headerRef.current.getBoundingClientRect().left
-            console.log('head: ', headerRef.current)
-            console.log('offset', offset)
-            const currPos = currLink.current.getBoundingClientRect()
-            setPos(currPos.left + currPos.width / 2 - glowLightWidth / 2 - offset)
-            console.log(currLink.current)
-        }
-    }, [currLink.current])
+        window.addEventListener('resize', () => { setResize(window.innerWidth) })
+
+    }, [])
 
     useEffect(() => {
-        switch (router.asPath) {
-            case '/resume':
-                currLink.current = resumeLink.current
-                break
-            case '/portfolio':
-                currLink.current = portfolioLink.current
-                break
-            case '/funstuff':
-                currLink.current = funstuffLink.current
-                break
-            default:
-                currLink.current = homeLink.current
-                break
+        if (headerRef.current != null) {
+            const offset = headerRef.current.getBoundingClientRect().left
+
+            switch (router.asPath) {
+                case '/resume':
+                    box = resumeLink.current.getBoundingClientRect()
+                    setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
+                    break
+                case '/portfolio':
+                    box = portfolioLink.current.getBoundingClientRect()
+                    setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
+                    break
+                case '/funstuff':
+                    box = funstuffLink.current.getBoundingClientRect()
+                    setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
+                    break
+                default:
+                    box = homeLink.current.getBoundingClientRect()
+                    setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
+                    break
+            }
         }
-    }, [router.asPath])
+    }, [router.asPath, resize])
 
     return (
         <header ref={headerRef} className={styles.nav}>
@@ -57,9 +60,9 @@ export default function Navbar() {
             <Link href="/funstuff">
                 <a ref={funstuffLink}>Fun stuff</a>
             </Link>
-            <span className={styles.spotLight} style={{ left: pos, width: glowLightWidth }} />
+            <span className={styles.spotLight} style={{ marginLeft: pos + "px", width: glowLightWidth }} />
         </header >
     )
 }
 
-// 
+export default Navbar

@@ -9,7 +9,7 @@ import Navbar from './navbar'
 export const siteTitle = 'Jacob Molin'
 
 
-export default function Layout({ children, home }) {
+function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -35,3 +35,5 @@ export default function Layout({ children, home }) {
         </div>
     )
 }
+
+export default Layout

@@ -9,11 +9,11 @@ import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Jacob</h1>
       </main>
-    </Layout>
+    </>
   )
 }
 // <div className={styles.container}>

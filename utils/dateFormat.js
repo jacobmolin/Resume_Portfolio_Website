@@ -1,6 +1,6 @@
-function stringClean(str) {
+function dateFormat(str) {
     return str.replace(/_/g, ' ').replace(/-/g, ' - ');
 
 }
 
-export default stringClean
+export default dateFormat

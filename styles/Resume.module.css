@@ -1,0 +1,32 @@
+.resumeWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+.headerImage {
+    width: 15rem;
+    height: 15rem;
+}
+
+.basicInfo {
+    /* border: 1px solid aliceblue; */
+    /* justify-content: space-around; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* text-align: right; */
+}
+
+.profile {
+    padding: 2rem 0 2rem 0;
+}
+
+.timelineWrapper {
+    border: 1px solid aliceblue;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    align-items: flex-start;
+}

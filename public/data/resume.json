@@ -2,18 +2,33 @@
     "basics": {
         "name": "Jacob Molin",
         "picture": "",
+        "currentTitel": "M.Sc. student in Media Tech. and Engineering",
         "email": "jacob.cb.molin@gmail.com",
-        "phone": "0730322579",
+        "phone": "073 032 25 79",
+        "location": "Norrköping / Stockholm, Sweden",
         "degree": "",
-        "website": "jacobmolin.com",
         "summary": ""
     },
+    "links": [
+        {
+            "label": "JacobMolin.com",
+            "url": "https://jacobmolin.com"
+        },
+        {
+            "label": "GitHub",
+            "url": "https://github.com/jacobmolin"
+        },
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/jacob-molin-488b1764/"
+        }
+    ],
     "profile": "Driven, analytical and problem-solving-loving M. Sc. student with a big interest in technology, creation and logical thinking.",
     "education": [
         {
             "school": "Linköping University",
             "location": "Norrköping",
-            "startDate": "09-2017",
+            "startDate": "2017-09-01",
             "endDate": "",
             "degree": "M.Sc. in Media Technology and Engineering",
             "degreeLevel": "Masters in Science",
@@ -22,8 +37,8 @@
         {
             "school": "UCLA Extension",
             "location": "Westwood, CA, USA",
-            "startDate": "03-2013",
-            "endDate": "06-2014",
+            "startDate": "2013-03-01",
+            "endDate": "2014-06-01",
             "degree": "Independent Music Production Certificate",
             "degreeLevel": "Certificate",
             "description": ""
@@ -31,8 +46,8 @@
         {
             "school": "Musicians Institute",
             "location": "Hollywood, CA, USA",
-            "startDate": "09-2010",
-            "endDate": "09-2011",
+            "startDate": "2010-09-01",
+            "endDate": "2011-09-01",
             "degree": "Audio Engineering Certificate (Music and Post Production Audio)",
             "degreeLevel": "Certificate",
             "description": ""
@@ -40,8 +55,8 @@
         {
             "school": "Åva Gymnasium",
             "location": "Täby",
-            "startDate": "08-2006",
-            "endDate": "06-2009",
+            "startDate": "2006-08-01",
+            "endDate": "2009-06-01",
             "degree": "Technical Programme, Innovation and Design",
             "degreeLevel": "High School",
             "description": ""
@@ -53,7 +68,7 @@
             "position": "Store Clerk",
             "location": "Norrköping",
             "website": "",
-            "startDate": "05-2019",
+            "startDate": "2019-05-01",
             "endDate": "",
             "summary": "Part time store clerk at Hemköp supermarket.",
             "highlights": [
@@ -65,8 +80,8 @@
             "position": "Programming tutor",
             "location": "Norrköping",
             "website": "",
-            "startDate": "08-2019",
-            "endDate": "09-2020",
+            "startDate": "2019-08-01",
+            "endDate": "2020-09-01",
             "summary": "Employed by Linköping University to tutor students in programming during two sessions per week. Students drop in and ask programming-related questions. Most questions regarded C++, JavaScript and MATLAB.",
             "highlights": [
                 ""
@@ -77,8 +92,8 @@
             "position": "Technician, outdoor cinema",
             "location": "Norrköping",
             "website": "",
-            "startDate": "07-2018",
-            "endDate": "09-2018",
+            "startDate": "2018-07-01",
+            "endDate": "2018-09-01",
             "summary": "Arranged movie screenings on a 8x14m inflatable cinema screen on different locations in Sweden.",
             "highlights": [
                 ""
@@ -89,8 +104,8 @@
             "position": "Location/production assistant on film sets",
             "location": "Stockholm",
             "website": "",
-            "startDate": "08-2016",
-            "endDate": "07-2018",
+            "startDate": "2016-08-01",
+            "endDate": "2018-07-01",
             "summary": "Assisting in setting up and maintaining film location sets as well as driving actors, crew and equipment to/from location for projects like \"Solsidan\" (movie), \"Hassel\" (TV series), \"Glorious\" (Måns Zelmerlöw music video).",
             "highlights": [
                 ""
@@ -101,8 +116,8 @@
             "position": "Music Producer",
             "location": "Los Angeles / Stockholm",
             "website": "",
-            "startDate": "08-2014",
-            "endDate": "08-2017",
+            "startDate": "2014-08-01",
+            "endDate": "2017-08-01",
             "summary": "Produced music for artists like Broderick Batts, Taps and Diana Ebe.",
             "highlights": [
                 ""
@@ -113,8 +128,8 @@
             "position": "Recording Engineer",
             "location": "Los Angeles / Stockholm",
             "website": "",
-            "startDate": "08-2014",
-            "endDate": "08-2017",
+            "startDate": "2014-08-01",
+            "endDate": "2017-08-01",
             "summary": "Recording and Audio Engineer for artists like Zara Larsson, Dua Lipa, Rev Run and Jared Leto.",
             "highlights": [
                 ""
@@ -125,8 +140,8 @@
             "position": "Sound and Light Technician, Sports Entertainer",
             "location": "Mallorca",
             "website": "",
-            "startDate": "04-2012",
-            "endDate": "11-2012",
+            "startDate": "2012-04-01",
+            "endDate": "2012-11-01",
             "summary": "Lead sports activities for hotel guests during the day and running sound and light for the stage shows during the night.",
             "highlights": [
                 ""
@@ -137,8 +152,8 @@
             "position": "Warehouse worker",
             "location": "Vallentuna",
             "website": "",
-            "startDate": "12-2011",
-            "endDate": "03-2012",
+            "startDate": "2011-12-01",
+            "endDate": "2012-03-01",
             "summary": "Packing and sending parcels with health and food supplements goods to customers.",
             "highlights": [
                 ""
@@ -149,8 +164,8 @@
             "position": "Janitor",
             "location": "Enskede",
             "website": "",
-            "startDate": "05-2010",
-            "endDate": "08-2010",
+            "startDate": "2010-05-01",
+            "endDate": "2010-08-01",
             "summary": "Performing general janitor services on the property. Also during June to August 2006.",
             "highlights": [
                 ""
@@ -161,8 +176,8 @@
             "position": "Warehouse worker",
             "location": "Vallentuna",
             "website": "",
-            "startDate": "11-2009",
-            "endDate": "04-2010",
+            "startDate": "2009-11-01",
+            "endDate": "2010-04-01",
             "summary": "Packing and sending parcels with electronic goods to customers.",
             "highlights": [
                 ""
@@ -173,8 +188,8 @@
             "position": "Restaurant Clerk",
             "location": "Täby",
             "website": "",
-            "startDate": "03-2008",
-            "endDate": "11-2009",
+            "startDate": "2008-03-01",
+            "endDate": "2009-11-01",
             "summary": "Full-time periodically and part-time during studies.",
             "highlights": [
                 ""
@@ -253,16 +268,82 @@
     ],
     "internships": [
         {
-            "company": "Hemköp",
-            "position": "Store Clerk",
-            "location": "Norrköping",
+            "company": "Al Shux",
+            "position": "Recording / Audio Engineer",
+            "location": "Los Angeles",
             "website": "",
-            "startDate": "05-2019",
-            "endDate": "",
-            "summary": "Part time store clerk at Hemköp supermarket.",
+            "startDate": "07-2014",
+            "endDate": "12-2014",
+            "summary": "Recording and audio engineer internship.",
             "highlights": [
-                "Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
+                ""
             ]
         },
-    ]
+        {
+            "company": "Tommy Tysper, TEN Music Group",
+            "position": "Recording / Audio Engineer",
+            "location": "Los Angeles",
+            "website": "",
+            "startDate": "06-2014",
+            "endDate": "11-2014",
+            "summary": "Recording and audio engineer internship.",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "David Jost",
+            "position": "Recording / Audio Engineer",
+            "location": "Los Angeles",
+            "website": "",
+            "startDate": "06-2013",
+            "endDate": "05-2014",
+            "summary": "Recording and vocal comping engineer internship. Also designed and built a vocal booth.",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "No. 4 Entertainment",
+            "position": "Recording / Audio Engineer",
+            "location": "Los Angeles",
+            "website": "",
+            "startDate": "04-2011",
+            "endDate": "07-2011",
+            "summary": "Recording and audio engineer internship.",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Programming languages",
+            "level": "",
+            "keywords": [
+                "C++",
+                "Java",
+                "Python",
+                "JavaScript",
+                "HTML/CSS",
+                "MATLAB"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Swedish",
+            "fluency": "Native"
+        },
+        {
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "French",
+            "fluency": "Working on it"
+        }
+    ],
+    "interests": "Playing and listening to music, exercising, experiencing nature, listening to podcasts.",
+    "references": "References available upon request"
 }

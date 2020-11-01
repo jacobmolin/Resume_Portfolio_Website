@@ -1,49 +1,83 @@
+
 import Head from 'next/head'
 import Link from 'next/link'
 // import { useState, useEffect } from 'react'
 import Layout from '../components/layout'
-import styles from '../styles/Home.module.css'
-import stylesP from '../styles/Portfolio.module.css'
+import stylesH from '../styles/Home.module.css'
+import styles from '../styles/Portfolio.module.css'
 import utilStyles from '../styles/utils.module.css'
 import stringClean from '../utils/stringClean.js'
 
 export const site = 'Portfolio'
-
+export const projectPreviews = ['diatot.png', 'vizWiz.png']
 function Portfolio({ repos }) {
-    // console.log(repos[0])
+    // console.log(repos)
 
 
 
     return (
 
-        <Layout>
+        <>
             <Head>
                 <title>{site}</title>
             </Head>
-            {/* <h1 className={styles.title}>{site}</h1> */}
 
-            <div className={stylesP.projWrapper}>
+            <div className={styles.projectsWrapper}>
                 {repos.map((repo, i) =>
-                    <Link href={repo.html_url} key={repo.html_url} >
-                        <a className={stylesP.project}>
-                            <img
-                                src="/images/profile.jpg"
-                            // className={}
-                            // alt={'Jacob Molin'}
-                            />
-                            <div>
-                                <div className={utilStyles.headingLg}>
-                                    {stringClean(repo.name)}
+                    repo.homepage ? (
+                        <Link href={repo.homepage} key={repo.homepage} >
+                            <a className={styles.project}>
+                                <div className={styles.projectContent}>
+
+                                    <img
+                                        src="/images/diatot.png"
+                                        className={styles.projectImage}
+                                        alt={repo.name}
+                                    />
+                                    <div className={styles.imageOverlay}> </div>
+                                    <div className={styles.textContainer}>
+                                        <div className={utilStyles.headingLg} >
+                                            {stringClean(repo.name)}
+                                        </div>
+                                        <div className={styles.description}>
+                                            {repo.description}
+                                            <br /><br />
+                                            Github link: <Link href={repo.html_url} key={repo.html_url} ><a>{repo.html_url}</a></Link>
+                                            {/* <div>Demo link: {repo.html_url}</div> */}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    {repo.description}
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                            </a>
+                        </Link>
+                    ) : (
+                            <Link href={repo.html_url} key={repo.html_url} >
+                                <a className={styles.project}>
+                                    <div className={styles.projectContent}>
+
+                                        <img
+                                            src="/images/vizWiz.png"
+                                            className={styles.projectImage}
+                                            alt={repo.name}
+                                        />
+                                        <div className={styles.imageOverlay}></div>
+                                        <div className={styles.textContainer}>
+                                            <div className={utilStyles.headingLg} >
+                                                {stringClean(repo.name)}
+                                            </div>
+                                            <div className={styles.description}>
+                                                {repo.description}
+                                                <div>Github link: <Link href={repo.html_url} key={repo.html_url} ><a>{repo.html_url}</a></Link></div>
+                                                {/* <div>Demo link: {repo.html_url}</div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                        )
+
                 )}
             </div>
-        </Layout >
+        </>
     )
 }
 
@@ -51,9 +85,17 @@ function Portfolio({ repos }) {
 export async function getStaticProps() {
     const resp = await fetch('https://api.github.com/users/jacobmolin/repos?per_page=50')
     let repos = []
+    // const projectImages = ['diatot', 'VizWiz']
 
     if (resp.status == 200) {
         repos = await resp.json()
+
+        // repos.forEach((r) => {
+        //     console.log(r.name)
+        //     if (projectImages.includes(r.name)) {
+        //         console.log(r.name)
+        //     }
+        // })
     } else {
         console.error('Could not fetch data!')
         console.error(resp.status, resp.statusText)

@@ -6,13 +6,13 @@ export const site = 'Fun stuff'
 
 export default function FunStuff() {
     return (
-        <Layout>
+        <>
             <Head>
                 <title>{site}</title>
             </Head>
             <main className={styles.main}>
                 <h1 className={styles.title}>{site}</h1>
             </main>
-        </Layout>
+        </>
     )
 }

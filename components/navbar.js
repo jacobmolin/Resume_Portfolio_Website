@@ -47,20 +47,22 @@ function Navbar() {
     }, [router.asPath, resize])
 
     return (
-        <header ref={headerRef} className={styles.nav}>
-            <Link href="/">
-                <a ref={homeLink}>Home</a>
-            </Link>
-            <Link href="/resume">
-                <a ref={resumeLink}>Resume</a>
-            </Link>
-            <Link href="/portfolio">
-                <a ref={portfolioLink}>Portfolio</a>
-            </Link>
-            <Link href="/funstuff">
+        <header ref={headerRef} className={styles.header}>
+            <nav className={styles.nav}>
+                <Link href="/">
+                    <a ref={homeLink}>HOME</a>
+                </Link>
+                <Link href="/resume">
+                    <a ref={resumeLink}>RESUME</a>
+                </Link>
+                <Link href="/portfolio">
+                    <a ref={portfolioLink}>PORTFOLIO</a>
+                </Link>
+                {/* <Link href="/funstuff">
                 <a ref={funstuffLink}>Fun stuff</a>
-            </Link>
-            <span className={styles.spotLight} style={{ marginLeft: pos + "px", width: glowLightWidth }} />
+            </Link> */}
+                <span className={styles.spotLight} style={{ marginLeft: pos + "px", width: glowLightWidth }} />
+            </nav>
         </header >
     )
 }

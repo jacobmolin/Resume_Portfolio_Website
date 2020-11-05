@@ -24,6 +24,7 @@
         }
     ],
     "profile": "Driven, analytical and problem-solving-loving M. Sc. student with a big interest in technology, creation and logical thinking.",
+    "profile2": "With experience in music production, customer service and logistics I have a unique insight in working and delivering results in teams with many different type of personalities. I'm curious, take initiatives and is always looking on how to improve products and work flows. I'm interested in exploring how technology, with the help of Artificial Intelligence, Machine Learning and programming in general, can be used to make life better and more fun for people. I thrive on new challenges and love making people laugh!",
     "education": [
         {
             "school": "Linköping University",
@@ -32,7 +33,7 @@
             "endDate": "",
             "degree": "M.Sc. in Media Technology and Engineering",
             "degreeLevel": "Masters in Science",
-            "description": "Focus on software development and visualization. Courses in AI, Machine Learning, Advanced C++ and Advanced Web Development. Expected graduation June 2022.\nBachelor project: In a group of seven where we researched implementation methods and developed an online price comparison service which collects data through webscraping online stores. My focus laid on collecting, comparing and organizing data. Implemented in Python."
+            "description": "Focus on software development and visualization. Courses in AI, Machine Learning, Advanced C++ and Advanced Web Development. Expected graduation June 2022.\n\nBachelor project: In a group of seven where we researched implementation methods and developed an online price comparison service which collects data through webscraping online stores. My focus laid on collecting, comparing and organizing data. Implemented in Python."
         },
         {
             "school": "UCLA Extension",

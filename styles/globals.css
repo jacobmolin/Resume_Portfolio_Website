@@ -12,11 +12,14 @@ html, body {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: Montserrat;
 }
 
 * {
   box-sizing: border-box;
-  color: #eaecf3;
+  color: #FFFFFF;
+  /* #eaecf3 */
+  font-family: Lato;
 }
 
 a:hover {

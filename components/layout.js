@@ -29,8 +29,9 @@ function Layout({ children, home }) {
 
             <footer className={styles.footer}>
                 <div>© Jacob Molin</div>
-                <div><a href="mailto: jacob.cb.molin@gmail.com">Contact</a>
-                </div>
+                <Link href="mailto: jacob.cb.molin@gmail.com">
+                    <a>Contact</a>
+                </Link>
             </footer>
         </div>
     )

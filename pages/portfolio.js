@@ -100,7 +100,7 @@ function Portfolio({ repos, projectImages }) {
 
                                     ) : (
                                             <img
-                                                src="/images/profile.jpeg"
+                                                src="/images/placeholder.png"
                                                 className={styles.projectImage}
                                                 alt={repo.name}
                                             />
@@ -132,7 +132,7 @@ function Portfolio({ repos, projectImages }) {
 
                                         ) : (
                                                 <img
-                                                    src="/images/profile.jpeg"
+                                                    src="/images/placeholder.png"
                                                     className={styles.projectImage}
                                                     alt={repo.name}
                                                 />

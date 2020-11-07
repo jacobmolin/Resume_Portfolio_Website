@@ -33,7 +33,9 @@
             "endDate": "",
             "degree": "M.Sc. in Media Technology and Engineering",
             "degreeLevel": "Masters in Science",
-            "description": "Focus on software development and visualization. Courses in AI, Machine Learning, Advanced C++ and Advanced Web Development. Expected graduation June 2022.\n\nBachelor project: In a group of seven where we researched implementation methods and developed an online price comparison service which collects data through webscraping online stores. My focus laid on collecting, comparing and organizing data. Implemented in Python."
+            "description": "Focus on software development and visualization. Courses in AI, Machine Learning, Advanced C++ and Advanced Web Development. Expected graduation June 2022.",
+            "bachelor": "Bachelor project:",
+            "subDescription": "In a group of seven where we researched implementation methods and developed an online price comparison service which collects data through webscraping online stores. My focus laid on collecting, comparing and organizing data. Implemented in Python."
         },
         {
             "school": "UCLA Extension",
@@ -273,8 +275,8 @@
             "position": "Recording / Audio Engineer",
             "location": "Los Angeles",
             "website": "",
-            "startDate": "07-2014",
-            "endDate": "12-2014",
+            "startDate": "2014-07-01",
+            "endDate": "2014-12-01",
             "summary": "Recording and audio engineer internship.",
             "highlights": [
                 ""
@@ -285,8 +287,8 @@
             "position": "Recording / Audio Engineer",
             "location": "Los Angeles",
             "website": "",
-            "startDate": "06-2014",
-            "endDate": "11-2014",
+            "startDate": "2014-06-01",
+            "endDate": "2014-11-01",
             "summary": "Recording and audio engineer internship.",
             "highlights": [
                 ""
@@ -297,8 +299,8 @@
             "position": "Recording / Audio Engineer",
             "location": "Los Angeles",
             "website": "",
-            "startDate": "06-2013",
-            "endDate": "05-2014",
+            "startDate": "2013-06-01",
+            "endDate": "2014-05-01",
             "summary": "Recording and vocal comping engineer internship. Also designed and built a vocal booth.",
             "highlights": [
                 ""
@@ -309,8 +311,8 @@
             "position": "Recording / Audio Engineer",
             "location": "Los Angeles",
             "website": "",
-            "startDate": "04-2011",
-            "endDate": "07-2011",
+            "startDate": "2011-04-01",
+            "endDate": "2011-07-01",
             "summary": "Recording and audio engineer internship.",
             "highlights": [
                 ""

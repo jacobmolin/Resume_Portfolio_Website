@@ -1,7 +1,7 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/Link'
-import Layout from '../components/layout'
+// import Link from 'next/Link'
+// import Layout from '../components/layout'
 // import HorizontalTimeline from 'react-horizontal-timeline'
 
 function Home() {

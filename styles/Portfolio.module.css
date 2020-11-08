@@ -1,9 +1,9 @@
 .projectsWrapper {
     display: flex;
-    justify-content: space-around;
     flex-flow: row wrap;
+    justify-content: space-around;
     align-content: flex-start;
-    max-width: 1500px;
+    max-width: 1200px;
 }
 
 .project {

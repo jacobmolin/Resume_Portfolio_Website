@@ -1,3 +1,9 @@
+@media screen and (max-width: 800px) {
+    .main {
+        padding-top: 2rem;
+    }
+}
+
 .container {
     max-width: 1500px;
     min-height: 100vh;
@@ -9,29 +15,13 @@
 }
 
 .main {
-    padding: 5rem 0;
+    padding: 2rem 0;
     /* flex: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-/* .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-/* .headerImage {
-    width: 6rem;
-    height: 6rem;
-} */
-
-/* .headerHomeImage {
-    width: 8rem;
-    height: 8rem;
-} */
 
 .header {
     width: 100%;
@@ -42,14 +32,17 @@
     /* align-items: center; */
     position: relative;
     padding: 0 0 0 15px;
+    text-transform: uppercase;
 }
 
 .nav {
     display: flex;
     /* flex-direction: column; */
-    align-items: space-between;
+    /* align-items: space-between; */
+    /* justify-content: space-between; */
     /* border-bottom: 1px solid #656669; */
     border-bottom: 1px solid #4B4D57;
+    /* max-width: 100% */
 }
 
 .nav a {
@@ -57,7 +50,7 @@
     /* margin-left: 15%;
   margin-right: 15%;*/
     margin-top: 4rem;
-    line-height: 1.15;
+    /* line-height: 1.15; */
     font-size: 1rem;
     padding: 0 2rem 0 2rem;
 }
@@ -77,7 +70,7 @@
 
 .spotLight {
     /* height: 10px; */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background: white;
     border-color: white;
     border-radius: 50%;
@@ -115,16 +108,20 @@
 .footer {
     display: flex;
     justify-content: space-around;
-    align-items: space-around;
+    /*  align-items: space-around; */
     /* border-top: 1px solid #656669; */
     border-top: 1px solid #4B4D57;
-    padding: 5%;
+    padding: 50px;
     width: 100%;
-    max-height: 10%;
-    margin-top: 50px;
+    max-height: 10vh;
+    /* margin-top: 50px; */
 }
 
-.footer img {
+.copyright {
+    font-family: "Montserrat";
+}
+
+/* .footer img {
     margin-left: 0.5rem;
 }
 
@@ -132,7 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* 
 .projWrapper {

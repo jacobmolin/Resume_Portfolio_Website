@@ -25,6 +25,10 @@
     line-height: 1.5;
 }
 
+.headingSm {
+    margin: 0;
+}
+
 .borderCircle {
     border-radius: 9999px;
 }

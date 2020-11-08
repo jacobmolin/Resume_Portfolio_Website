@@ -3,20 +3,20 @@ import Layout from '../components/layout'
 import stylesH from '../styles/Home.module.css'
 import styles from '../styles/Resume.module.css'
 import utilStyles from '../styles/utils.module.css'
-import { withStyles, makeStyles } from '@material-ui/core/styles'
-import Timeline from '@material-ui/lab/Timeline'
-import TimelineItem from '@material-ui/lab/TimelineItem'
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
-import TimelineConnector from '@material-ui/lab/TimelineConnector'
-import TimelineContent from '@material-ui/lab/TimelineContent'
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent'
-import TimelineDot from '@material-ui/lab/TimelineDot'
+import { makeStyles, withStyles } from '@material-ui/core/styles'
+import {
+    Timeline,
+    TimelineItem as MuiTimelineItem,
+    TimelineSeparator,
+    TimelineConnector,
+    TimelineContent,
+    TimelineOppositeContent,
+    TimelineDot
+} from '@material-ui/lab'
 import FastfoodIcon from '@material-ui/icons/Fastfood'
 import LaptopMacIcon from '@material-ui/icons/LaptopMac'
 import AdjustRounded from '@material-ui/icons/AdjustRounded'
 import School from '@material-ui/icons/School'
-import Work from '@material-ui/icons/Work'
-import WorkOutline from '@material-ui/icons/WorkOutline'
 import LocationOn from '@material-ui/icons/LocationOn'
 import MailOutline from '@material-ui/icons/MailOutline'
 import Create from '@material-ui/icons/Create'
@@ -24,40 +24,78 @@ import RightArrow from '@material-ui/icons/KeyboardArrowRightRounded'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'
-import { ArrowBackIosOutlined } from '@material-ui/icons'
+import useWindowSize from '../utils/useWindowSize.js'
 
 export const site = 'Resume'
 export const name = 'Jacob Molin'
 
-// const useStyles = makeStyles({
-//     paper: {
-//         padding: '1rem',
-//         // backgroundColor: 'rgb(255,0,0)',
-//         // backgroundColor: theme.palette.secondary.main,
-//     },
-//     timePlace: {
-//         flex: 'none',
-//         justifyContent: 'space-around',
-//         minWidth: '160px',
-//         padding: '6px 10px',
-//         background: "rgb(255,0,0)",
-//     },
+const TimelineItem = withStyles({
+    missingOppositeContent: {
+        "&:before": {
+            display: "none"
+        }
+    }
+})(MuiTimelineItem);
 
-// })
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({ //theme => (
     wrapIcon: {
         verticalAlign: 'middle',
         display: 'inline-flex'
     },
-    test: {
+    timePlace: {
+        flex: "none",
+        justifyContent: 'space-around',
+        minWidth: '168px',
+        padding: '6px 10px',
         border: '1px solid red',
+        // backgroundColor: 'red',
+        // style={{ flex: "none", justifyContent: 'space-around', minWidth: '168px', padding: '6px 10px' }}
+    },
+    text: {
+        // style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+        color: "#FFFFFF",
+        fontFamily: 'Lato',
+        fontWeight: '400'
+    },
+    test1: {
+        // color: "#FFFFF",
+        color: "red",
+        fontFamily: "Lato",
+        fontWeight: "300",
+        lineHeight: "25px",
+        letterSpacing: "0.5px",
+        paddingTop: "0.7rem"
     }
-}))
+}) //)
 
 function Resume({ data }) {
+    const { width } = useWindowSize()
+    const widthLimit = 800
     const classes = useStyles()
+    // console.log('classes:', classes)
     // #EAECF3 - old timeplace txt color
+    const timeOC = {
+        flex: "none",
+        justifyContent: 'space-around',
+        minWidth: '168px',
+        padding: '6px 10px'
+    }
+    const paperStyle = {
+        background: "none",
+        border: "1px solid #4B4D57",
+        marginTop: "1rem",
+        marginBottom: "1rem",
+        padding: "1.5rem",
+        maxWidth: "625px"
+    }
+    const descriptionStyle = {
+        color: "#FFFFF",
+        fontFamily: "Lato",
+        fontWeight: "300",
+        lineHeight: "25px",
+        letterSpacing: "0.5px",
+        paddingTop: "0.7rem",
+    }
 
     return (
         <>
@@ -65,21 +103,19 @@ function Resume({ data }) {
                 <title>{site}</title>
             </Head>
             <div className={styles.resumeWrapper}>
-                <div className={styles.basicInfo}>
-                    <img
-                        src="/images/profile.jpeg"
+                <div className={styles.topInfo}>
+                    <div className={styles.imageWrapper}><img
+                        // src="/images/profile.jpeg"
+                        src="/images/profileBW2.png"
                         className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                         alt={name}
                     />
-                    <div>
-                        <h1>{data.basics.name}</h1>
-                        <h4>{data.basics.currentTitel}</h4>
-                        {/* <Link href="mailto: jacob.cb.molin@gmail.com"> */}
-                        <a href="mailto: jacob.cb.molin@gmail.com">
-                            <h4><MailOutline /> {data.basics.email}</h4>
-                        </a>
-                        {/* </Link> */}
-                        <h4 ><LocationOn /> {data.basics.location}</h4>
+                    </div>
+                    <div className={styles.basicInfo}>
+                        {/* <div> */}
+                        <h1 className={styles.name}>{data.basics.name}</h1>
+                        <h4 className={utilStyles.headingSm}>{data.basics.currentTitel}</h4>
+                        <h4 className={`${utilStyles.headingSm} ${styles.forIconText}`}><LocationOn style={{ paddingRight: "0.5rem" }} /> {data.basics.location}</h4>
 
                         {/* <Typography variant="subtitle1" className={classes.wrapIcon}>
                          <h4> <LocationOn  className={classes.linkIcon} /> {data.basics.location}</h4>
@@ -96,6 +132,9 @@ function Resume({ data }) {
 
                         {/* <LocationOn /> */}
 
+                        {/* </div> */}
+
+                        {/* <h3 >PDF download</h3> */}
                     </div>
                 </div>
 
@@ -115,95 +154,238 @@ function Resume({ data }) {
                     <div className={styles.skills}>
                         <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                             Skills</h1>
-                        {/* {console.log("data.skills:", data.skills)} */}
-                        {/* <h5>{data.skills[0].name}</h5> */}
                         <ul>
                             {data.skills[0].keywords.map((skill, i) =>
-                                <li key={`${skill.company}+${i}`}>
+                                <li key={`${skill}+${i}`}>
                                     {skill}
                                 </li>
                             )}
                         </ul>
                     </div>
+
+                    {/* <div className={styles.language}>
+                        <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
+                            Languages</h1>
+                        <ul>
+                            {data.languages.map((lang, i) =>
+                                <li key={`${lang.language}+${i}`}>
+                                    {lang.language}, {lang.fluency}
+                                </li>
+                            )}
+                        </ul>
+                    </div> */}
                 </div>
 
                 <div className={styles.lowerResume}>
-                    {/* <div> */}
+                    {/* <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
+                        Education</h1>
+                    <div className={styles.timelineWrapper}>
+                        <Timeline align="left" style={{ marginTop: "0", paddingLeft: "0" }}>
+                            {data.education.map((edu, i) =>
+                                (edu.description != "") ? (
+                                    <TimelineItem key={`${edu.school}+${i}`}>
+                                        <TimelineOppositeContent style={timeOC}>
+                                            <Typography variant="body2">
+                                                <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
+                                            </Typography>
+                                            <Typography variant="body2"
+                                                style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+                                            >
+                                                {edu.location}
+                                            </Typography>
+                                        </TimelineOppositeContent>
+                                        <TimelineSeparator>
+                                            <TimelineDot color="inherit" variant="outlined">
+                                                <School />
+                                            </TimelineDot>
+                                            < TimelineConnector style={{ background: '#4B4D57' }} />
+                                        </TimelineSeparator>
+                                        <TimelineContent>
+                                            <Paper elevation={3} style={paperStyle}>
+                                                <Typography variant="h5"
+                                                    style={{
+                                                        color: "#FFFFF",
+                                                        fontFamily: "Lato",
+                                                        fontWeight: "400"
+                                                    }}>
+                                                    {edu.school}
+                                                </Typography>
+                                                <Typography variant="h6"
+                                                    style={{
+                                                        color: "#FFFFF",
+                                                        fontFamily: "Lato",
+                                                        fontWeight: "300"
+                                                    }}>
+                                                    {edu.degree}
+                                                </Typography>
+                                                <Typography
+                                                    style={descriptionStyle}>
+                                                    {edu.description}
+                                                </Typography>
+                                                <Typography style={descriptionStyle}>
+                                                    <span style={{ fontWeight: "400" }}>{edu.bachelor}</span> {edu.subDescription}
+                                                </Typography>
+                                            </Paper>
+                                        </TimelineContent>
+                                    </TimelineItem>
+                                ) : (
+                                        <TimelineItem key={`${edu.school}+${i}`}>
+                                            <TimelineOppositeContent style={timeOC}>
+                                                <Typography variant="body2">
+                                                    <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
+                                                </Typography>
+                                                <Typography variant="body2"
+                                                    style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+                                                >
+                                                    {edu.location}
+                                                </Typography>
+                                            </TimelineOppositeContent>
+                                            <TimelineSeparator>
+                                                <TimelineDot color="inherit" variant="outlined">
+                                                    <School />
+                                                </TimelineDot>
+                                                < TimelineConnector style={{ background: '#4B4D57' }} />
+                                            </TimelineSeparator>
+                                            <TimelineContent>
+                                                <Paper elevation={3} style={paperStyle}>
+                                                    <Typography variant="h5"
+                                                        style={{
+                                                            color: "#FFFFF",
+                                                            fontFamily: "Lato",
+                                                            fontWeight: "400"
+                                                        }}>
+                                                        {edu.school}
+                                                    </Typography>
+                                                    <Typography variant="h6"
+                                                        style={{
+                                                            color: "#FFFFF",
+                                                            fontFamily: "Lato",
+                                                            fontWeight: "300"
+                                                        }}>
+                                                        {edu.degree}
+                                                    </Typography>
+                                                </Paper>
+                                            </TimelineContent>
+                                        </TimelineItem>
+                                    )
+                            )}
+                        </Timeline>
+                    </div> */}
+
                     <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                         Education</h1>
                     <div className={styles.timelineWrapper}>
                         <Timeline align="left" style={{ marginTop: "0", paddingLeft: "0" }}>
-                            {/* key={'hey'}  */}
                             {data.education.map((edu, i) =>
+                                // (edu.description != "") ? (
                                 <TimelineItem key={`${edu.school}+${i}`}>
-                                    <TimelineOppositeContent className={classes.test} style={{ flex: "none", justifyContent: 'space-around', minWidth: '168px', padding: '6px 10px' }}>
-                                        {/* className={classes.timePlace} */}
-                                        <Typography variant="body2" style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}>
-                                            <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
-                                        </Typography>
-                                        <Typography variant="body2" style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}>
-                                            {edu.location}
-                                        </Typography>
-                                    </TimelineOppositeContent>
+                                    {(width > widthLimit) && (
+                                        <TimelineOppositeContent style={timeOC}>
+                                            <Typography variant="body2">
+                                                <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
+                                            </Typography>
+                                            <Typography variant="body2"
+                                                style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+                                            >
+                                                {edu.location}
+                                            </Typography>
+                                        </TimelineOppositeContent>
+                                    )}
                                     <TimelineSeparator>
                                         <TimelineDot color="inherit" variant="outlined">
                                             <School />
                                         </TimelineDot>
-                                        {/* {(i < data.education.length - 1) && */}
                                         < TimelineConnector style={{ background: '#4B4D57' }} />
-                                        {/* } */}
                                     </TimelineSeparator>
                                     <TimelineContent>
-                                        <Paper elevation={3} style={{
-                                            background: "none",
-                                            border: "1px solid #4B4D57",
-                                            marginTop: "1rem",
-                                            marginBottom: "1rem",
-                                            padding: "1.5rem",
-                                            maxWidth: "625px"
-                                        }}> {/* boxShadow: "0 0 0", borderRadius: '4px', boxShadow: '2px 2px 4px rgb(105, 105, 105)', className={classes.paper}*/}
-                                            <Typography variant="h5" component="h1" style={{
-                                                color: "#FFFFF",
-                                                fontFamily: "Lato",
-                                                fontWeight: "400"
-                                            }}>
+                                        {(width <= widthLimit) && (
+                                            <div>
+                                                <Typography variant="body2">
+                                                    <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
+                                                </Typography>
+                                                <Typography variant="body2"
+                                                    style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+                                                >
+                                                    {edu.location}
+                                                </Typography>
+                                            </div>
+                                        )}
+                                        < Paper elevation={3} style={paperStyle}>
+                                            <Typography variant="h5"
+                                                style={{
+                                                    color: "#FFFFF",
+                                                    fontFamily: "Lato",
+                                                    fontWeight: "400"
+                                                }}>
                                                 {edu.school}
                                             </Typography>
-                                            <Typography variant="h6" component="h3" style={{
-                                                color: "#FFFFF",
-                                                fontFamily: "Lato",
-                                                fontWeight: "300"
-                                            }}>
+                                            <Typography variant="h6"
+                                                style={{
+                                                    color: "#FFFFF",
+                                                    fontFamily: "Lato",
+                                                    fontWeight: "300"
+                                                }}>
                                                 {edu.degree}
                                             </Typography>
-                                            <Typography style={{
-                                                color: "#FFFFF",
-                                                fontFamily: "Lato",
-                                                fontWeight: "300",
-                                                lineHeight: "25px",
-                                                letterSpacing: "0.5px",
-                                                paddingTop: "0.7rem",
-                                            }}>{/* */}
-                                                {edu.description}
-                                            </Typography>
-                                            <Typography style={{
-                                                color: "#FFFFF",
-                                                fontFamily: "Lato",
-                                                fontWeight: "300",
-                                                lineHeight: "25px",
-                                                letterSpacing: "0.5px",
-                                                paddingTop: "0.7rem",
-                                            }}>{/* */}
-                                                <span style={{ fontWeight: "400" }}>{edu.bachelor}</span> {edu.subDescription}
-                                            </Typography>
+                                            {(edu.description != "") && (
+                                                <div>
+                                                    <Typography
+                                                        style={descriptionStyle}>
+                                                        {edu.description}
+                                                    </Typography>
+                                                    <Typography style={descriptionStyle}>
+                                                        <span style={{ fontWeight: "400" }}>{edu.bachelor}</span> {edu.subDescription}
+                                                    </Typography>
+                                                </div>
+                                            )}
                                         </Paper>
                                     </TimelineContent>
                                 </TimelineItem>
+                                // ) : (
+                                //         <TimelineItem key={`${edu.school}+${i}`}>
+                                //             <TimelineOppositeContent style={timeOC}>
+                                //                 <Typography variant="body2">
+                                //                     <Date dateString={edu.startDate} /> - <Date dateString={edu.endDate} />
+                                //                 </Typography>
+                                //                 <Typography variant="body2"
+                                //                     style={{ color: "#FFFFFF", fontFamily: 'Lato', fontWeight: '400' }}
+                                //                 >
+                                //                     {edu.location}
+                                //                 </Typography>
+                                //             </TimelineOppositeContent>
+                                //             <TimelineSeparator>
+                                //                 <TimelineDot color="inherit" variant="outlined">
+                                //                     <School />
+                                //                 </TimelineDot>
+                                //                 < TimelineConnector style={{ background: '#4B4D57' }} />
+                                //             </TimelineSeparator>
+                                //             <TimelineContent>
+                                //                 <Paper elevation={3} style={paperStyle}>
+                                //                     <Typography variant="h5"
+                                //                         style={{
+                                //                             color: "#FFFFF",
+                                //                             fontFamily: "Lato",
+                                //                             fontWeight: "400"
+                                //                         }}>
+                                //                         {edu.school}
+                                //                     </Typography>
+                                //                     <Typography variant="h6"
+                                //                         style={{
+                                //                             color: "#FFFFF",
+                                //                             fontFamily: "Lato",
+                                //                             fontWeight: "300"
+                                //                         }}>
+                                //                         {edu.degree}
+                                //                     </Typography>
+                                //                 </Paper>
+                                //             </TimelineContent>
+                                //         </TimelineItem>
+                                //     )
                             )}
                         </Timeline>
                     </div>
 
-                    <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
+                    {/* <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                         Work</h1>
                     <div className={styles.timelineWrapper}>
                         <Timeline align="left" style={{ marginTop: "0", paddingLeft: "0" }}>
@@ -224,8 +406,6 @@ function Resume({ data }) {
                                         <TimelineConnector style={{ background: '#4B4D57' }} />
                                     </TimelineSeparator>
                                     <TimelineContent>
-
-
                                         <Paper elevation={3} style={{
                                             background: "none",
                                             border: "1px solid #4B4D57",
@@ -258,45 +438,14 @@ function Resume({ data }) {
                                             }}>
                                                 {work.summary}
                                             </Typography>
-                                            {/* <Typography style={{
-                                                color: "#FFFFF",
-                                                fontFamily: "Lato",
-                                                fontWeight: "300",
-                                                lineHeight: "25px",
-                                                letterSpacing: "0.5px",
-                                                paddingTop: "0.7rem",
-                                            }}>
-                                                <span style={{ fontWeight: "400" }}>{edu.bachelor}</span> {edu.subDescription}
-                                            </Typography> */}
                                         </Paper>
-
-
-                                        {/* 
-
-                                        <Paper elevation={3} style={{
-                                            background: "none", border: "1px solid #4B4D57",
-                                            marginTop: "1rem", marginBottom: "1rem",
-                                            padding: "1.5rem"
-                                        }}>
-                                            <Typography variant="h5" component="h1" style={{ color: "#FFFFF", fontFamily: "Lato" }}>
-                                                {work.company}
-                                            </Typography>
-                                            <Typography variant="h6" component="h2" style={{ color: "#FFFFF", fontFamily: "Lato" }}>
-                                                {work.position}
-                                            </Typography>
-                                            <Typography style={{ color: "#FFFFF", fontFamily: "Lato", fontWeight: "300", lineHeight: "25px" }}>
-                                                {work.summary}
-                                            </Typography>
-                                        </Paper> */}
-
-
                                     </TimelineContent>
                                 </TimelineItem>
                             )}
                         </Timeline>
-                    </div>
+                    </div> */}
 
-                    <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
+                    {/* <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                         Internships</h1>
                     <div className={styles.timelineWrapper}>
                         <Timeline align="left" style={{ marginTop: "0", paddingLeft: "0" }}>
@@ -313,12 +462,10 @@ function Resume({ data }) {
                                     <TimelineSeparator>
                                         <TimelineDot color="inherit" variant="outlined">
                                             <RightArrow />
-                                            {/* <RightArrow /> */}
                                         </TimelineDot>
                                         < TimelineConnector style={{ background: '#4B4D57' }} />
                                     </TimelineSeparator>
                                     <TimelineContent>
-
                                         <Paper elevation={3} style={{
                                             background: "none",
                                             border: "1px solid #4B4D57",
@@ -352,36 +499,12 @@ function Resume({ data }) {
                                                 {intern.summary}
                                             </Typography>
                                         </Paper>
-
-
-
-
-                                        {/* <Paper elevation={3} style={{
-                                            background: "none", border: "1px solid #4B4D57",
-                                            marginTop: "1rem", marginBottom: "1rem",
-                                            padding: "1.5rem"
-                                        }}>
-                                            <Typography variant="h5" component="h1" style={{ color: "#FFFFF", fontFamily: "Lato" }}>
-                                                {intern.company}
-                                            </Typography>
-                                            <Typography variant="h6" component="h2" style={{ color: "#FFFFF", fontFamily: "Lato" }}>
-                                                {intern.position}
-                                            </Typography>
-                                            <Typography style={{ color: "#FFFFF", fontFamily: "Lato", fontWeight: "300", lineHeight: "25px" }}>
-                                            </Typography>
-                                        </Paper> */}
-
-
                                     </TimelineContent>
                                 </TimelineItem>
                             )}
                         </Timeline>
-                    </div>
+                    </div> */}
                 </div>
-
-
-                {/* </div> */}
-
             </div>
         </>
     )

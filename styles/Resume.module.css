@@ -6,9 +6,17 @@
     /* padding: 0 0 2rem 0; */
 }
 
+.imageWrapper {
+    padding: 0 2rem 0 2rem;
+    max-height: 15rem;
+}
+
 .headerImage {
-    width: 20rem;
-    height: 20rem;
+    /* min-width: 1rem; */
+    /* min-height: 1rem; */
+    /* max-width: 20rem; */
+    /* max-height: 20rem; */
+    max-height: 15rem;
     object-fit: cover;
 }
 
@@ -20,13 +28,28 @@
 .basicInfo {
     /* border: 1px solid aliceblue; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    justify-self: center;
+    padding: 0 1rem 0 1rem;
     margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    line-height: 30px;
     /* color: #808080;*/
     /* color: rgb(97, 97, 99);
     color: #323440 */
     /* text-align: right; */
+}
+
+.topInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.forIconText {
+    display: flex;
+    align-items: center;
+    /* padding: 0 1rem 0 1rem; */
 }
 
 .upperResume {
@@ -37,15 +60,17 @@
 }
 
 .profile {
-    padding: 0 1rem 0 0;
-    max-width: 950px;
+    /* padding: 0 1rem 0 0; */
+    margin: 0 2rem 0 0;
+    max-width: 800px;
     font-weight: 300;
     line-height: 25px;
     letter-spacing: 1px;
 }
 
 .skills {
-    padding: 0 1rem 0 1rem;
+    /* padding: 0 1rem 0 1rem; */
+    margin: 0 1rem 0 2rem;
 }
 
 .lowerResume {}
@@ -60,3 +85,25 @@
 }
 
 .paper {}
+
+@media screen and (max-width: 800px) {
+    .topInfo {
+        flex-direction: column;
+    }
+    .basicInfo {
+        justify-self: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    .name {
+        text-align: center;
+    }
+    .imageWrapper {
+        display: flex;
+        justify-content: center;
+        max-height: 10rem;
+    }
+    .headerImage {
+        max-height: 10rem;
+    }
+}

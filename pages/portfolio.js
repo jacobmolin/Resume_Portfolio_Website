@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
-// import { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import stylesH from '../styles/Home.module.css'
 import styles from '../styles/Portfolio.module.css'
@@ -11,99 +10,41 @@ import utilStyles from '../styles/utils.module.css'
 import stringClean from '../utils/stringClean.js'
 
 export const site = 'Portfolio'
-export const projectPreviews = ['diatot.png', 'vizWiz.png']
-
-
-// export const projects = [
-//     {
-//         name: "Project 1",
-//         description:
-//             "LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM ",
-//         image: "/images/realdq-mockup.jpg",
-//     },
-//     {
-//         name: "Project 2",
-//         description:
-//             "LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM ",
-//         image: "/images/mockup-PS.jpg",
-//     },
-//     {
-//         name: "Project 3",
-//         description:
-//             "LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM ",
-//         image: "/images/kr-mockup.jpg",
-//     },
-//     {
-//         name: "Project 4",
-//         description:
-//             "LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM LORem IPSUM ",
-//         image: "/images/bp-mockup.jpg",
-//     },
-// ]
-
-// 'CPP_Mulifiles_VSCode', 
-//     'Resume_Portfolio_Website', 
-// const projectImages = ['diatot', 'VizWiz']
+// export const projectPreviews = ['diatot.png', 'vizWiz.png']
 
 function Portfolio({ repos, projectImages }) {
-    // const projectImages = fs.readdirSync(projectImagesDir)
-    // console.log(repos)
-
-    // const [hidden, setHidden] = useState(true);
-    // console.log("hidden:", hidden);
 
     return (
-
         <>
             <Head>
                 <title>{site}</title>
             </Head>
-
-            {/* <div className="projectWrapper">
-                {projects.map((proj, i) => {
-                    return hidden ? (
-                        <div className="project" ref={`projRef${i}`} key={`projName${i}`}>
-                            <img className="boxPic" src={proj.image}></img>
-                            <h3
-                                className="projectName"
-                                onClick={() => setHidden(false)}>
-                                {proj.name}
-                            </h3>
-                        </div>
-                    ) : (
-                            <div className="project" key={`projName${i}`}>
-                                <img
-                                    className="boxPic"
-                                    style={{ opacity: "0.5" }}
-                                    src={proj.image}></img>
-                                <p className="info" onClick={() => setHidden(true)}>
-                                    {proj.description}
-                                </p>
-                            </div>
-                        )
-                }
-                )}
-            </div> */}
-
+            <h1>Here are some in- and out-of-school projects I’ve worked on.</h1>
             <div className={styles.projectsWrapper}>
                 {repos.map((repo, i) =>
                     repo.homepage ? (
                         <Link href={repo.homepage} key={repo.homepage} target="_blank">
-                            <a className={styles.project} target="_blank">
+                            <a className={styles.project}>
                                 <div className={styles.projectContent}>
                                     {(projectImages.includes(`${repo.name}.png`)) ? (
+                                        // <Link href={repo.homepage} key={repo.homepage} target="_blank">
                                         <img
                                             src={`/images/${repo.name}.png`}
                                             className={styles.projectImage}
                                             alt={repo.name}
                                         />
 
+                                        // </Link>
                                     ) : (
+                                            // <Link href={repo.homepage} key={repo.homepage} target="_blank">
+
                                             <img
                                                 src="/images/placeholder.png"
                                                 className={styles.projectImage}
                                                 alt={repo.name}
                                             />
+
+                                            // </Link>
                                         )}
                                     <div className={styles.imageOverlay} />
                                     <div className={styles.textContainer}>

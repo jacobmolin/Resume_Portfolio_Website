@@ -6,11 +6,12 @@ import { useEffect, useRef, useState } from 'react'
 const glowLightWidth = 0.1
 
 function Navbar() {
+    const pages = ['home', 'resume', 'portfolio', 'contact']
     const router = useRouter()
     const homeLink = useRef(null)
     const resumeLink = useRef(null)
     const portfolioLink = useRef(null)
-    const funstuffLink = useRef(null)
+    const contactLink = useRef(null)
     const headerRef = useRef(null)
     let box
     const [resize, setResize] = useState(0)
@@ -34,8 +35,8 @@ function Navbar() {
                     box = portfolioLink.current.getBoundingClientRect()
                     setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
                     break
-                case '/funstuff':
-                    box = funstuffLink.current.getBoundingClientRect()
+                case '/contact':
+                    box = contactLink.current.getBoundingClientRect()
                     setPos(box.left - offset - glowLightWidth / 2 + (box.right - box.left) / 2)
                     break
                 default:
@@ -50,7 +51,7 @@ function Navbar() {
         <header ref={headerRef} className={styles.header}>
             <nav className={styles.nav}>
                 <Link href="/">
-                    <a ref={homeLink}>HOME</a>
+                    <a ref={homeLink}>home</a>
                 </Link>
                 <Link href="/resume">
                     <a ref={resumeLink}>RESUME</a>
@@ -58,9 +59,9 @@ function Navbar() {
                 <Link href="/portfolio">
                     <a ref={portfolioLink}>PORTFOLIO</a>
                 </Link>
-                {/* <Link href="/funstuff">
-                <a ref={funstuffLink}>Fun stuff</a>
-            </Link> */}
+                <Link href="/contact">
+                    <a ref={contactLink}>CONTACT</a>
+                </Link>
                 <span className={styles.spotLight} style={{ marginLeft: pos + "px", width: glowLightWidth }} />
             </nav>
         </header >

@@ -8,16 +8,27 @@ const name = 'Jacob Molin'
 
 function Home() {
   return (
-    <>
-      <main className={styles.main}>
-        <img src="images/profile.jpeg"
-          className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-          alt={name}
-        />
-        <h1 className={styles.title}>Hi, I'm Jacob!</h1>
-        <p>I'm studying for a degree in Master of Science in Media Technology and Engineering</p>
-      </main>
-    </>
+    // <>
+    <div className={styles.container}>
+      <div className={styles.imgName}>
+        <div className={utilStyles.borderCircleParent}>
+          <img src="images/profile.jpg"
+            className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+            // ${utilStyles.borderCircle}
+            // style={{ margin: "0 2rem" }}
+            alt={name}
+          />
+        </div>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>Hi, I'm Jacob!</h1>
+          <div className={styles.introText}>
+            <div> I'm studying for a degree in Master of Science in Media Technology and Engineering.</div>
+            <div> Have a look at my resume and my projects in my portfolio!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    // </>
   )
 }
 

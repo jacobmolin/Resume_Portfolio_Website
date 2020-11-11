@@ -113,7 +113,7 @@ export default function TemporaryDrawer() {
             {/* <div
                 style={{ border: "1px solid red", display: "flex", justifyContent: "center", alignItems: "center", width: "70%" }}
             > */}
-            <div >SIDAN</div>
+            <div style={{ paddingTop: "2rem" }}>SIDAN</div>
             <React.Fragment key="drawer">
                 {burger ? (
                     <button className={`${hamStyles.hamburger} ${hamStyles.hamburgerSqueeze} ${hamStyles.isActive}`} onClick={toggleDrawer(true)} type="button">

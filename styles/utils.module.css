@@ -29,8 +29,27 @@
     margin: 0;
 }
 
+.forIconText {
+    display: flex;
+    align-items: center;
+}
+
+.borderCircleParent {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
 .borderCircle {
-    border-radius: 9999px;
+    /* border-radius: 9999px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    line-height: 35px;
+    letter-spacing: 1.5px;
 }
 
 .colorInherit {
@@ -52,7 +71,10 @@
 }
 
 .lightText {
-    color: #999
+    /* color: #999 */
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.8px;
 }
 
 .errorPage {

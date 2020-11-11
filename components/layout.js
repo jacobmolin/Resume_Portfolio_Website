@@ -30,17 +30,17 @@ function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            {(width > widthLimit) ? (
-                <Navbar />
-            ) : (
+            {/* {(width > widthLimit) ? ( */}
+            <Navbar />
+            {/* ) : (
                     <Drawer />
-                )}
+            )} */}
             <main className={styles.main}>{children}</main>
             <footer className={styles.footer}>
                 <div className={styles.copyright}>© Jacob Molin</div>
-                <Link href="mailto: jacob.cb.molin@gmail.com">
+                {/* <Link href="mailto: jacob.cb.molin@gmail.com">
                     <a>Contact</a>
-                </Link>
+                </Link> */}
             </footer>
         </div>
     )

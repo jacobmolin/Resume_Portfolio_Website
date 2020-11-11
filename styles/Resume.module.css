@@ -2,13 +2,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1200px;
-    /* padding: 0 0 2rem 0; */
+    max-width: 1500px;
+}
+
+.resume {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.sideBar {
+    margin-left: 1rem;
 }
 
 .imageWrapper {
-    padding: 0 2rem 0 2rem;
-    max-height: 15rem;
+    margin: 0 2rem 0 2rem;
+    /* max-height: 15rem; */
 }
 
 .headerImage {
@@ -16,13 +24,21 @@
     /* min-height: 1rem; */
     /* max-width: 20rem; */
     /* max-height: 20rem; */
+    max-width: 15rem;
     max-height: 15rem;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .sectionHeader {
     margin: 0 0 0 0;
     /* color: red; */
+}
+
+.topInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
 .basicInfo {
@@ -41,36 +57,27 @@
     /* text-align: right; */
 }
 
-.topInfo {
-    display: flex;
-    justify-content: space-around;
-}
-
-.forIconText {
-    display: flex;
-    align-items: center;
-    /* padding: 0 1rem 0 1rem; */
-}
-
 .upperResume {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     padding-bottom: 3rem;
 }
 
 .profile {
-    /* padding: 0 1rem 0 0; */
-    margin: 0 2rem 0 0;
-    max-width: 800px;
+    padding: 0 1rem 0 0;
+    /* margin: 0 2rem 0 0; */
+    max-width: 830px;
     font-weight: 300;
     line-height: 25px;
     letter-spacing: 1px;
 }
 
-.skills {
-    /* padding: 0 1rem 0 1rem; */
-    margin: 0 1rem 0 2rem;
+.sideBarContainer {
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
 }
 
 .lowerResume {}
@@ -84,11 +91,16 @@
     padding: 0 0 2rem 0;
 }
 
-.paper {}
-
 @media screen and (max-width: 800px) {
+    .resumeWrapper {
+        /* margin-left: 2rem; */
+        /* margin-right: 2rem; */
+        /* padding: 0 3rem; */
+        /* border: 1px solid red; */
+    }
     .topInfo {
         flex-direction: column;
+        margin-bottom: 0;
     }
     .basicInfo {
         justify-self: center;
@@ -97,13 +109,39 @@
     }
     .name {
         text-align: center;
+        margin-bottom: .5rem;
     }
     .imageWrapper {
-        display: flex;
-        justify-content: center;
-        max-height: 10rem;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* max-height: 10rem; */
+        /* padding: 0; */
     }
     .headerImage {
-        max-height: 10rem;
+        /* max-height: 12rem; */
+        max-width: 12rem;
+    }
+    .upperResume {
+        flex-direction: column;
+        margin: 0 1rem;
+        padding-bottom: 1rem;
+    }
+    .lowerResume {
+        margin: 0 1rem;
+    }
+    .profile {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+    }
+    .sideBar {
+        display: flex;
+        justify-content: space-around;
+    }
+    .sideBarContainer {
+        /* font-weight: 400; */
+        line-height: 30px;
+        /* letter-spacing: 3px; */
+        /* margin-bottom: 2rem; */
     }
 }

@@ -173,6 +173,12 @@
     }
 }
 
+@media screen and (max-width: 350px) {
+    .nav a {
+        font-size: 13px;
+    }
+}
+
 /* .footer img {
     margin-left: 0.5rem;
 }

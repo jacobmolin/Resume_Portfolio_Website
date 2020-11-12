@@ -87,12 +87,16 @@
 
 .projHeading {
     margin-top: 3rem;
+    /* width: max-content; */
     /* color: #6A77BB; */
     font-weight: 700;
+    /* padding: 0 0.3rem; */
     /* min-width: 10px; */
-    /* text-shadow: 1px 1px 1px #252833; */
+    text-shadow: 0 0 15px rgba(26, 28, 34, 0.3);
     /* text-align: center; */
-    background-color: rgba(26, 28, 34, 0.5);
+    /* background-color: rgba(26, 28, 34, 0.3);
+    box-shadow: 0px 0px 10px 1px rgba(28, 28, 34, .8); */
+    /* background: linear-gradient(180deg, rgba(28, 28, 34, 0.3) 0%, rgba(27, 28, 34, 0.8) 50%, rgba(26, 28, 34, 0.3) 100%); */
 }
 
 .descLink {
@@ -120,7 +124,11 @@
 
 @media screen and (max-width: 800px) {
     .project {
-        margin: 2rem 0;
+        margin: 3.5rem 0;
+    }
+    .introText {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
     .textContainer {
         /* border: 1px solid red; */
@@ -133,7 +141,7 @@
         /* padding-right: 1rem; */
     }
     .projHeading {
-        margin-top: 0.5rem;
+        margin-top: 1rem;
         margin-bottom: 0.5rem;
         font-size: 20px;
         /* text-align: center; */

@@ -23,7 +23,6 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'
 import useWindowSize from '../utils/useWindowSize.js'
-import { Divider } from '@material-ui/core'
 import data from '../public/data/resume'
 
 export const site = 'Resume'

@@ -24,6 +24,7 @@ import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'
 import useWindowSize from '../utils/useWindowSize.js'
 import { Divider } from '@material-ui/core'
+import data from '../public/data/resume.json'
 
 export const site = 'Resume'
 export const name = 'Jacob Molin'
@@ -67,7 +68,7 @@ const useStyles = makeStyles({ //theme => (
     }
 }) //)
 
-function Resume({ data }) {
+function Resume() {
     const { width } = useWindowSize()
     const widthLimit = 800
     const classes = useStyles()
@@ -439,26 +440,5 @@ function Resume({ data }) {
         </>
     )
 }
+
 export default Resume
-
-export async function getStaticProps() {
-    const resp = await fetch(`${process.env.PUBLIC_URL}/data/resume.json`)
-    let data = []
-
-    if (resp.status == 200) {
-        data = await resp.json()
-    } else {
-        console.error('Could not fetch data!')
-        console.error(resp.status, resp.statusText)
-    }
-
-    return {
-        props: {
-            data,
-        },
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every second
-        revalidate: 60 * 5, // In seconds
-    }
-}

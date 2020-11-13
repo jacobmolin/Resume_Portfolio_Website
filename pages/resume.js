@@ -70,7 +70,7 @@ const useStyles = makeStyles({ //theme => (
 function Resume() {
     const { width } = useWindowSize()
     const widthLimit = 800
-    const classes = useStyles()
+    // const classes = useStyles()
 
     const timeOC = {
         flex: "none",

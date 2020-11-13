@@ -23,7 +23,7 @@ function Navbar() {
     useEffect(() => {
         setTimeout(() => {
             setStartOffset(homeLink.current.getBoundingClientRect().left)
-        }, 50)
+        }, 70)
     }, [])
 
 

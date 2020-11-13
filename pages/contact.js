@@ -4,13 +4,16 @@ import Phone from '@material-ui/icons/Phone'
 import MailOutline from '@material-ui/icons/MailOutline'
 import GitHub from '@material-ui/icons/GitHub'
 import LinkedIn from '@material-ui/icons/LinkedIn'
+import data from '../public/data/resume'
 
 // INFO REMOVED FROM GITHUB REPOS BECAUSE TOO MUCH TEXT IN DESCRIPTION
 // during my masters in Data Technologies at Linköping University, Sweden
 
 export const site = "Contact"
 
-function Contact({ data }) {
+
+function Contact() {
+    // console.log("data", data)
     return (
         <>
             <Head>
@@ -58,27 +61,29 @@ function Contact({ data }) {
         </>
     )
 }
+
+// export async function getStaticProps() {
+//     // const resp = await fetch(`${process.env.PUBLIC_URL}/data/resume.json`)
+//     const data = await import('public/data/resume.json')
+//     console.log("data:", data)
+//     // let data = []
+
+//     // if (resp.status == 200) {
+//     //     data = await resp.json()
+//     // } else {
+//     //     console.error('Could not fetch data!')
+//     //     console.error(resp.status, resp.statusText)
+//     // }
+
+//     return {
+//         props: {
+//             data,
+//         },
+//         // Next.js will attempt to re-generate the page:
+//         // - When a request comes in
+//         // - At most once every second
+//         // revalidate: 60 * 5, // In seconds
+//     }
+// }
+
 export default Contact
-
-
-export async function getStaticProps() {
-    const resp = await fetch(`${process.env.PUBLIC_URL}/data/resume.json`)
-    let data = []
-
-    if (resp.status == 200) {
-        data = await resp.json()
-    } else {
-        console.error('Could not fetch data!')
-        console.error(resp.status, resp.statusText)
-    }
-
-    return {
-        props: {
-            data,
-        },
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every second
-        revalidate: 60 * 5, // In seconds
-    }
-}

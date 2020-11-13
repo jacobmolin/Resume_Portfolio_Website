@@ -1,9 +1,5 @@
-// import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css'
-// import Link from 'next/Link'
-// import Layout from '../components/layout'
-// import HorizontalTimeline from 'react-horizontal-timeline'
 const name = 'Jacob Molin'
 
 function Home() {
@@ -14,8 +10,6 @@ function Home() {
         <div className={utilStyles.borderCircleParent}>
           <img src="images/profile.jpg"
             className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-            // ${utilStyles.borderCircle}
-            // style={{ margin: "0 2rem" }}
             alt={name}
           />
         </div>

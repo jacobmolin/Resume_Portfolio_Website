@@ -24,6 +24,7 @@ import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'
 import useWindowSize from '../utils/useWindowSize.js'
 import { Divider } from '@material-ui/core'
+import data from '../public/data/resume'
 
 export const site = 'Resume'
 export const name = 'Jacob Molin'
@@ -67,7 +68,7 @@ const useStyles = makeStyles({ //theme => (
     }
 }) //)
 
-function Resume({ data }) {
+function Resume() {
     const { width } = useWindowSize()
     const widthLimit = 800
     const classes = useStyles()
@@ -439,7 +440,6 @@ function Resume({ data }) {
         </>
     )
 }
-export default Resume
 
 export async function getStaticProps() {
     const resp = await fetch(`${process.env.PUBLIC_URL}/data/resume.json`)
@@ -462,3 +462,5 @@ export async function getStaticProps() {
         revalidate: 60 * 5, // In seconds
     }
 }
+
+export default Resume

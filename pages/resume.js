@@ -441,26 +441,4 @@ function Resume() {
     )
 }
 
-export async function getStaticProps() {
-    const resp = await fetch(`${process.env.PUBLIC_URL}/data/resume.json`)
-    let data = []
-
-    if (resp.status == 200) {
-        data = await resp.json()
-    } else {
-        console.error('Could not fetch data!')
-        console.error(resp.status, resp.statusText)
-    }
-
-    return {
-        props: {
-            data,
-        },
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every second
-        revalidate: 60 * 5, // In seconds
-    }
-}
-
 export default Resume

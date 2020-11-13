@@ -11,9 +11,7 @@ import data from '../public/data/resume'
 
 export const site = "Contact"
 
-
 function Contact() {
-    // console.log("data", data)
     return (
         <>
             <Head>

@@ -1,17 +1,13 @@
 
 import Head from 'next/head'
-import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
-import Layout from '../components/layout'
-import stylesH from '../styles/Home.module.css'
 import styles from '../styles/Portfolio.module.css'
 import utilStyles from '../styles/utils.module.css'
 import stringClean from '../utils/stringClean.js'
 import GitHub from '@material-ui/icons/GitHub'
 
 export const site = 'Portfolio'
-// export const projectPreviews = ['diatot.png', 'vizWiz.png']
 
 function Portfolio({ repos, projectImages }) {
 
@@ -135,7 +131,6 @@ function Portfolio({ repos, projectImages }) {
                                         </div>
                                     </div>
                                 </a>
-                                // </Link>
                             )
                     )}
                 </div>
@@ -170,146 +165,4 @@ export async function getStaticProps() {
     }
 }
 
-
-
-
-
-{/* <div className={styles.projectsWrapper}>
-    {repos.map((repo, i) =>
-        repo.homepage ? (
-            <Link href={repo.homepage} key={repo.homepage} >
-                <a className={styles.project}>
-                    <div className={styles.projectContent}>
-
-                        <img
-                            src="/images/diatot.png"
-                            className={styles.projectImage}
-                            alt={repo.name}
-                        />
-                        <div className={styles.imageOverlay}> </div>
-                        <div className={styles.textContainer}>
-                            <div className={`${utilStyles.headingLg} ${styles.projHeading}`}>
-                                {stringClean(repo.name)}
-                            </div>
-                            <div className={styles.description}>
-                                {repo.description}
-                                                <br /><br />
-                                <br /><br />
-                                            GitHub link: <Link href={repo.html_url} key={repo.html_url} ><a>{repo.html_url}</a></Link>
-                                </div>
-                        </div>
-                    </div>
-                </a>
-            </Link>
-        ) : (
-                <Link href={repo.html_url} key={repo.html_url} >
-                    <a className={styles.project}>
-                        <div className={styles.projectContent}>
-
-                            <img
-                                src="/images/vizWiz.png"
-                                className={styles.projectImage}
-                                alt={repo.name}
-                            />
-                            <div className={styles.imageOverlay}></div>
-                            <div className={styles.textContainer}>
-                                <div className={`${utilStyles.headingLg} ${styles.projHeading}`}>
-                                    {stringClean(repo.name)}
-                                </div>
-                                <div className={styles.description}>
-                                    {repo.description}
-                                                <br /><br />
-                                    <div>GitHub link: <Link href={repo.html_url} key={repo.html_url} ><a>{repo.html_url}</a></Link></div>
-                                    </div>
-                            </div>
-                        </div>
-                    </a>
-                </Link>
-            )
-
-    )}
-</div> */}
-
-
-
-
-
-
-
-
-
-
-
-// export async function getServerSideProps() {
-//     // Get external data from the file system, API, DB etc.
-//     const resp = await fetch('https://api.GitHub.com/users/jacobmolin/repos?per_page=50')
-//     const data = await resp.json()
-//     const urls = []
-//     console.log(data)
-
-//     // data.forEach(repo => {
-//     //     urls.push(repo['html_url'])
-//     // });
-
-//     // console.log('data:', data)
-//     // const urls = ['123', '234']
-//     // console.log(urls)
-
-//     // The value of the 'props' key will be
-//     // passed to the 'Portfolio' component
-//     return {
-//         props: {
-//             urls
-//         }
-//     }
-// }
-
-
-
-
-// USE STATE SOLUTION
-// const [data, setData] = useState([])
-
-// useEffect(() => {
-//     fetchData()
-// }, []);
-
-// const fetchData = async () => {
-//     const resp = await fetch('https://api.GitHub.com/users/jacobmolin/repos?per_page=50')
-
-//     if (resp.status == 200) {
-//         setData(await resp.json())
-//     } else {
-//         console.error('Could not fetch data!')
-//     }
-// }
-
-// console.log(data)
-
-
-
-
-// const [data, setData] = useState([])
-
-// useEffect(() => {
-//     // DIFFERENT WAY
-//     fetch('https://api.GitHub.com/users/jacobmolin/repos?per_page=50')
-//         .then((resp) => resp.json())
-//         .then((res_data) => {
-//             // console.log('data: ', res_data)
-//             setData(res_data)
-//         })
-//     fetchData()
-// }, []);
-
-// OLD WAY
-// async function fetchData() {
-//     const resp = await fetch('https://api.GitHub.com/users/jacobmolin/repos?per_page=50')
-
-//     if (resp.status == 200) {
-//         setData(await resp.json())
-//     } else {
-//         console.error('Could not fetch data!')
-//     }
-// }
 export default Portfolio

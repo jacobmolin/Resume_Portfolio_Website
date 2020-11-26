@@ -11,14 +11,9 @@ import {
     TimelineOppositeContent,
     TimelineDot
 } from '@material-ui/lab'
-import FastfoodIcon from '@material-ui/icons/Fastfood'
-import AdjustRounded from '@material-ui/icons/AdjustRounded'
 import School from '@material-ui/icons/School'
 import LocationOn from '@material-ui/icons/LocationOn'
 import Work from '@material-ui/icons/Work'
-import MailOutline from '@material-ui/icons/MailOutline'
-import Create from '@material-ui/icons/Create'
-import RightArrow from '@material-ui/icons/KeyboardArrowRightRounded'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'

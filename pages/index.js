@@ -4,7 +4,6 @@ const name = 'Jacob Molin'
 
 function Home() {
   return (
-    // <>
     <div className={styles.container}>
       <div className={styles.imgName}>
         <div className={utilStyles.borderCircleParent}>
@@ -22,7 +21,6 @@ function Home() {
         </div>
       </div>
     </div>
-    // </>
   )
 }
 

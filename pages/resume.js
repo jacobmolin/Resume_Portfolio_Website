@@ -14,11 +14,13 @@ import {
 import School from '@material-ui/icons/School'
 import LocationOn from '@material-ui/icons/LocationOn'
 import Work from '@material-ui/icons/Work'
+import Assignment from '@material-ui/icons/Assignment'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Date from '../components/date'
 import useWindowSize from '../utils/useWindowSize.js'
 import data from '../public/data/resume'
+// import resumePDF from '../public/data/CV_jacobmolin_nov2020.pdf'
 
 export const site = 'Resume'
 export const name = 'Jacob Molin'
@@ -123,37 +125,35 @@ function Resume() {
                         <img
                             src="/images/profile.jpg"
                             className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                            // 
                             alt={name}
                         />
                     </div>
-                    <div className={styles.basicInfo}>
-                        {/* <div> */}
-                        <h1 className={styles.name}>{data.basics.name}</h1>
-                        <div className={utilStyles.lightText}>{data.basics.currentTitel}</div>
-                        <div className={`${utilStyles.lightText} ${utilStyles.forIconText}`}>
-                            <LocationOn style={{ paddingRight: "0.5rem" }} />
-                            {data.basics.location}
+                    <div>
+                        <div className={styles.basicInfo}>
+                            <h1 className={styles.name}>{data.basics.name}</h1>
+                            <div className={utilStyles.lightText}>{data.basics.currentTitel}</div>
+                            {(width > widthLimit) && (
+                                <div className={`${utilStyles.lightText} ${utilStyles.forIconText}`}>
+                                    <LocationOn style={{ paddingRight: "0.5rem" }} />
+                                    {data.basics.location}
+                                </div>
+                            )}
+                            {(width <= widthLimit) && (
+                                <div className={styles.download}>
+                                    <a href="/data/CV_jacobmolin_nov2020.pdf" download>
+                                        PDF download
+                                 </a>
+                                </div>
+                            )}
                         </div>
 
-                        {/* <Typography variant="subtitle1" className={classes.wrapIcon}>
-                         <h4> <LocationOn  className={classes.linkIcon} /> {data.basics.location}</h4>
-                        </Typography> */}
-
-                        {/* <div style={{
-                            verticalAlign: 'middle',
-                            display: 'inline-flex'
-                        }}>
-                            <LocationOn />
-                            <p>revolve</p>
-                        </div> */}
-
-
-                        {/* <LocationOn /> */}
-
-                        {/* </div> */}
-
-                        {/* <h3 >PDF download</h3> */}
+                        {(width > widthLimit) && (
+                            <div className={styles.download}>
+                                <a href="/data/CV_jacobmolin_nov2020.pdf" download>
+                                    PDF download
+                                 </a>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -219,6 +219,7 @@ function Resume() {
                             </div>
                         )}
 
+                        {/* EDUCATION */}
                         <div className={styles.lowerResume}>
                             <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                                 Education</h1>
@@ -260,11 +261,11 @@ function Resume() {
                                                 < Paper elevation={3} style={paperStyle}>
                                                     <Typography variant="h5"
                                                         style={lato400}>
-                                                        {edu.school}
+                                                        {edu.degree}
                                                     </Typography>
                                                     <Typography variant="h6"
                                                         style={lato300}>
-                                                        {edu.degree}
+                                                        {edu.school}
                                                     </Typography>
                                                     {(edu.description != "") && (
                                                         <div>
@@ -273,7 +274,7 @@ function Resume() {
                                                                 {edu.description}
                                                             </Typography>
                                                             <Typography style={descriptionStyle}>
-                                                                <span style={{ fontWeight: "400" }}>
+                                                                <span style={{ fontWeight: "600" }}>
                                                                     {edu.bachelor}
                                                                 </span> {edu.subDescription}
                                                             </Typography>
@@ -286,6 +287,7 @@ function Resume() {
                                 </Timeline>
                             </div>
 
+                            {/* WORK */}
                             <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                                 Work</h1>
                             <div className={styles.timelineWrapper}>
@@ -311,7 +313,14 @@ function Resume() {
                                             <TimelineContent>
                                                 {(width <= widthLimit) && (
                                                     <div>
-
+                                                        <Typography variant="body2">
+                                                            <Date dateString={work.startDate} /> - <Date dateString={work.endDate} />
+                                                        </Typography>
+                                                        <Typography variant="body2"
+                                                            style={lato400}
+                                                        >
+                                                            {work.location}
+                                                        </Typography>
                                                     </div>
                                                 )}
                                                 <Paper elevation={3} style={paperStyle}>
@@ -320,14 +329,14 @@ function Resume() {
                                                         fontFamily: "Lato",
                                                         fontWeight: "400"
                                                     }}>
-                                                        {work.company}
+                                                        {work.position}
                                                     </Typography>
                                                     <Typography variant="h6" component="h3" style={{
                                                         color: "#FFFFF",
                                                         fontFamily: "Lato",
                                                         fontWeight: "300"
                                                     }}>
-                                                        {work.position}
+                                                        {work.company}
                                                     </Typography>
                                                     <Typography style={{
                                                         color: "#FFFFF",
@@ -346,6 +355,75 @@ function Resume() {
                                 </Timeline>
                             </div>
 
+                            {/* COMMISSIONS OF TRUST */}
+                            <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
+                                Commissions of Trust</h1>
+                            <div className={styles.timelineWrapper}>
+                                <Timeline align="left" style={timeLineStyle}>
+                                    {data.commissionOfTrust.map((com, i) =>
+                                        <TimelineItem key={`${com.entity}+${i}`}>
+                                            {(width > widthLimit) && (
+                                                <TimelineOppositeContent style={timeOC}>
+                                                    <Typography variant="body2" style={dateLoc}>
+                                                        <Date dateString={com.startDate} /> - <Date dateString={com.endDate} />
+                                                    </Typography>
+                                                    <Typography variant="body2" style={lato400}>
+                                                        {com.location}
+                                                    </Typography>
+                                                </TimelineOppositeContent>
+                                            )}
+                                            <TimelineSeparator>
+                                                <TimelineDot color="inherit" variant="outlined">
+                                                    <Assignment />
+                                                </TimelineDot>
+                                                <TimelineConnector style={{ background: '#4B4D57' }} />
+                                            </TimelineSeparator>
+                                            <TimelineContent>
+                                                {(width <= widthLimit) && (
+                                                    <div>
+                                                        <Typography variant="body2">
+                                                            <Date dateString={com.startDate} /> - <Date dateString={com.endDate} />
+                                                        </Typography>
+                                                        <Typography variant="body2"
+                                                            style={lato400}
+                                                        >
+                                                            {com.location}
+                                                        </Typography>
+                                                    </div>
+                                                )}
+                                                <Paper elevation={3} style={paperStyle}>
+                                                    <Typography variant="h5" component="h1" style={{
+                                                        color: "#FFFFF",
+                                                        fontFamily: "Lato",
+                                                        fontWeight: "400"
+                                                    }}>
+                                                        {com.position}
+                                                    </Typography>
+                                                    <Typography variant="h6" component="h3" style={{
+                                                        color: "#FFFFF",
+                                                        fontFamily: "Lato",
+                                                        fontWeight: "300"
+                                                    }}>
+                                                        {com.entity}
+                                                    </Typography>
+                                                    <Typography style={{
+                                                        color: "#FFFFF",
+                                                        fontFamily: "Lato",
+                                                        fontWeight: "300",
+                                                        lineHeight: "25px",
+                                                        letterSpacing: "0.5px",
+                                                        paddingTop: "0.7rem",
+                                                    }}>
+                                                        {com.summary}
+                                                    </Typography>
+                                                </Paper>
+                                            </TimelineContent>
+                                        </TimelineItem>
+                                    )}
+                                </Timeline>
+                            </div>
+
+                            {/* INTERNSHIPS */}
                             <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
                                 Internships</h1>
                             <div className={styles.timelineWrapper}>
@@ -430,7 +508,7 @@ function Resume() {
                         </div>
                     )}
                 </div>
-            </div>
+            </div >
         </>
     )
 }

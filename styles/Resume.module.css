@@ -39,6 +39,7 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 4rem;
+    /* border: 1px solid green; */
 }
 
 .basicInfo {
@@ -55,6 +56,14 @@
     /* color: rgb(97, 97, 99);
     color: #323440 */
     /* text-align: right; */
+    /* border: 1px solid red; */
+}
+
+.download {
+    /* margin-top: 3rem; */
+    padding: 0 1rem 0 1rem;
+    font-weight: 500;
+    /* border: 1px solid yellow; */
 }
 
 .upperResume {
@@ -111,6 +120,9 @@
     .name {
         text-align: center;
         margin-bottom: .5rem;
+    }
+    .download {
+        margin-top: 0.5rem;
     }
     .imageWrapper {
         /* display: flex; */

@@ -23,8 +23,8 @@
             "url": "https://www.linkedin.com/in/jacob-molin-488b1764/"
         }
     ],
-    "profile": "Driven, analytical and problem-solving-loving M. Sc. student with a big interest in technology, creation and logical thinking.",
-    "profile2": "With experience in music production, customer service and logistics I have a unique insight in working and delivering results in teams with many different type of personalities. I'm curious, take initiatives and is always looking on how to improve products and work flows. I'm interested in exploring how technology, with the help of Artificial Intelligence, Machine Learning and programming in general, can be used to make life better and more fun for people. I thrive on new challenges and love making people laugh!",
+    "profile": "Driven, analytical and problem-solving-loving M.Sc. student with a big interest in technology, creation and logical thinking.",
+    "profile2": "With experience in music production, customer service and logistics I have a unique insight in working with and delivering results in teams with many different types of personalities. I'm curious, take initiatives and is always looking on how to improve products and workflows. I'm interested in exploring how technology, with the help of Artificial Intelligence, Machine Learning and programming in general, can be used to make life better and more fun for people. I thrive on new challenges and love making people laugh!",
     "education": [
         {
             "school": "Linköping University",
@@ -33,9 +33,9 @@
             "endDate": "",
             "degree": "M.Sc. in Media Technology and Engineering",
             "degreeLevel": "Masters in Science",
-            "description": "Focus on software development and visualization. Courses in AI, Machine Learning, Advanced C++ and Advanced Web Development. Expected graduation June 2022.",
+            "description": "Focus on programming and system development. Courses in Machine Learning, AI, Big Data Analytics, Neural Networks and more. Expected graduation June 2022. Current GPA: 4.13 / 5.0 (Grades are given in U, 3, 4, 5). Currently in my penultimate year.",
             "bachelor": "Bachelor project:",
-            "subDescription": "In a group of seven where we researched implementation methods and developed an online price comparison service which collects data through webscraping online stores. My focus laid on collecting, comparing and organizing data. Implemented in Python."
+            "subDescription": "In a group of seven where we researched implementation methods and developed an online price comparison service which collects data by web scraping online stores. My focus laid on collecting, comparing and organizing data by writing Python scripts. The project has continued after the course’s end (see more under Portfolio)."
         },
         {
             "school": "UCLA Extension",
@@ -67,20 +67,8 @@
     ],
     "work": [
         {
-            "company": "Hemköp",
-            "position": "Store Clerk",
-            "location": "Norrköping",
-            "website": "",
-            "startDate": "2019-05-01",
-            "endDate": "",
-            "summary": "Part time store clerk at Hemköp supermarket.",
-            "highlights": [
-                "Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
-            ]
-        },
-        {
             "company": "LiTHeHack, Linköping University",
-            "position": "Programming tutor",
+            "position": "Programming Tutor",
             "location": "Norrköping",
             "website": "",
             "startDate": "2019-08-01",
@@ -91,97 +79,37 @@
             ]
         },
         {
-            "company": "Flimmer Filmförening",
-            "position": "Technician, outdoor cinema",
-            "location": "Norrköping",
-            "website": "",
-            "startDate": "2018-07-01",
-            "endDate": "2018-09-01",
-            "summary": "Arranged movie screenings on a 8x14m inflatable cinema screen on different locations in Sweden.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
             "company": "Freelance",
-            "position": "Location/production assistant on film sets",
+            "position": "Location / Production Assistant on film sets",
             "location": "Stockholm",
             "website": "",
             "startDate": "2016-08-01",
             "endDate": "2018-07-01",
-            "summary": "Assisting in setting up and maintaining film location sets as well as driving actors, crew and equipment to/from location for projects like \"Solsidan\" (movie), \"Hassel\" (TV series), \"Glorious\" (Måns Zelmerlöw music video).",
+            "summary": "Setting up and maintaining film location sets as well as driving actors, crew and equipment to/from location for projects like \"Solsidan\" (movie) and \"Hassel\" (TV series).",
             "highlights": [
                 ""
             ]
         },
         {
             "company": "Freelance",
-            "position": "Music Producer",
+            "position": "Audio Engineer / Music Producer",
             "location": "Los Angeles / Stockholm",
             "website": "",
             "startDate": "2014-08-01",
             "endDate": "2017-08-01",
-            "summary": "Produced music for artists like Broderick Batts, Taps and Diana Ebe.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Freelance",
-            "position": "Recording Engineer",
-            "location": "Los Angeles / Stockholm",
-            "website": "",
-            "startDate": "2014-08-01",
-            "endDate": "2017-08-01",
-            "summary": "Recording and Audio Engineer for artists like Zara Larsson, Dua Lipa, Rev Run and Jared Leto.",
+            "summary": "Recording and Audio Engineer for artists like Zara Larsson, Dua Lipa, Rev Run and Jared Leto. Music producer for artists like Broderick Batts, Taps and Diana Ebe.",
             "highlights": [
                 ""
             ]
         },
         {
             "company": "Hotels Viva",
-            "position": "Sound and Light Technician, Sports Entertainer",
+            "position": "Sound / Light Technician, Sports Entertainer",
             "location": "Mallorca",
             "website": "",
             "startDate": "2012-04-01",
             "endDate": "2012-11-01",
-            "summary": "Lead sports activities for hotel guests during the day and running sound and light for the stage shows during the night.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Vitaminvaruhuset.se",
-            "position": "Warehouse worker",
-            "location": "Vallentuna",
-            "website": "",
-            "startDate": "2011-12-01",
-            "endDate": "2012-03-01",
-            "summary": "Packing and sending parcels with health and food supplements goods to customers.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Iris Bemanning",
-            "position": "Janitor",
-            "location": "Enskede",
-            "website": "",
-            "startDate": "2010-05-01",
-            "endDate": "2010-08-01",
-            "summary": "Performing general janitor services on the property. Also during June to August 2006.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Dustin AB",
-            "position": "Warehouse worker",
-            "location": "Vallentuna",
-            "website": "",
-            "startDate": "2009-11-01",
-            "endDate": "2010-04-01",
-            "summary": "Packing and sending parcels with electronic goods to customers.",
+            "summary": "Led sports activities for hotel guests during the day and running sound and light for the stage shows during the night for one season at a hotel on the Spanish island Mallorca.",
             "highlights": [
                 ""
             ]
@@ -197,16 +125,41 @@
             "highlights": [
                 ""
             ]
+        },
+        {
+            "company": "",
+            "position": "Various summer and part time jobs",
+            "location": "Stockholm / Norrköping",
+            "website": "",
+            "startDate": "2006-06-01",
+            "endDate": "",
+            "summary": "Like store clerk at Hemköp (present), outdoor cinema technician, janitor and warehouse worker.",
+            "highlights": [
+                ""
+            ]
         }
     ],
-    "comissionOfTrust": [
+    "commissionOfTrust": [
         {
-            "position": "Chairman of NAFFI",
+            "position": "Auditor",
+            "entity": "NAFFI (Norrköping’s Academic Sports Association)",
             "location": "Norrköping",
             "website": "naffi.nu",
-            "startDate": "08-2018",
-            "endDate": "06-2019",
-            "summary": "Chairman of NAFFI (Norrköping Academic Sports Association). Running meetings and ultimately responsible for the weekly and overall operations. For students NAFFI arranges weekly sports activities and tournaments.",
+            "startDate": "2020-05-01",
+            "endDate": "2021-05-01",
+            "summary": "As one of two auditors, being responsible for auditing the accounting and financial situation of NAFFI for the academic year 2019/2020.",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "position": "Chairman",
+            "entity": "NAFFI (Norrköping’s Academic Sports Association)",
+            "location": "Norrköping",
+            "website": "naffi.nu",
+            "startDate": "2018-05-01",
+            "endDate": "2019-05-01",
+            "summary": "I was responsible for running board meetings and ultimately responsible for the weekly and overall operations.",
             "highlights": [
                 ""
             ]
@@ -271,49 +224,13 @@
     ],
     "internships": [
         {
-            "company": "Al Shux",
-            "position": "Recording / Audio Engineer",
+            "company": "",
+            "position": "Recording / Audio Engineer intern",
             "location": "Los Angeles",
             "website": "",
-            "startDate": "2014-07-01",
+            "startDate": "2011-06-01",
             "endDate": "2014-12-01",
-            "summary": "Recording and audio engineer internship.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Tommy Tysper, TEN Music Group",
-            "position": "Recording / Audio Engineer",
-            "location": "Los Angeles",
-            "website": "",
-            "startDate": "2014-06-01",
-            "endDate": "2014-11-01",
-            "summary": "Recording and audio engineer internship.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "David Jost",
-            "position": "Recording / Audio Engineer",
-            "location": "Los Angeles",
-            "website": "",
-            "startDate": "2013-06-01",
-            "endDate": "2014-05-01",
-            "summary": "Recording and vocal comping engineer internship. Also designed and built a vocal booth.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "No. 4 Entertainment",
-            "position": "Recording / Audio Engineer",
-            "location": "Los Angeles",
-            "website": "",
-            "startDate": "2011-04-01",
-            "endDate": "2011-07-01",
-            "summary": "Recording and audio engineer internship.",
+            "summary": "Various recording / audio engineer internships in professional studios with international producers and songwriters like Al Shux (Jay-Z, Alicia Keys) and David Jost (Selena Gomez, Tokio Hotel). Among many things, I recorded A-list artists, built a vocal booth and rewired an entire studio.",
             "highlights": [
                 ""
             ]
@@ -325,11 +242,11 @@
             "level": "",
             "keywords": [
                 "C++",
-                "Java",
-                "Python",
                 "JavaScript",
-                "HTML/CSS",
-                "MATLAB"
+                "Python",
+                "MATLAB",
+                "Java",
+                "Git"
             ]
         }
     ],

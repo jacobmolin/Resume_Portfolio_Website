@@ -203,19 +203,6 @@ function Resume() {
                                         )}
                                     </div>
                                 </div>
-                                {/* <div className={styles.sideBarContainer}>
-                                    <h1 className={`${utilStyles.headingXL} ${styles.sectionHeader}`}>
-                                        Links</h1>
-                                    <div className={styles.links}>
-                                        {data.links.map((link, i) =>
-                                            ((link.label != 'JacobMolin.com') && (
-                                                < a href={link.url} key={link.label} target="_blank" >
-                                                    {link.label}
-                                                </a>
-                                            ))
-                                        )}
-                                    </div>
-                                </div> */}
                             </div>
                         )}
 
@@ -478,6 +465,7 @@ function Resume() {
                             </div>
                         </div>
                     </div>
+
                     {/* <SideBar data /> */}
                     {(width > widthLimit) && (
                         <div className={styles.sideBar}>

@@ -33,21 +33,14 @@ function Portfolio({ repos, projectImages }) {
                             <div className={styles.imageOverlay} />
                             <div className={styles.textContainer}>
                                 <h2 className={`${utilStyles.headingLg} ${styles.projHeading}`}>
-                                    Bachelor project - Zpeja.com
+                                    Bachelor project
                                 </h2>
                                 <div className={styles.descLink}>
                                     <div className={styles.description}>
-                                        In a group of seven where we researched implementation methods and developed
-                                        an online price comparison service which collects data by web scraping online stores.
-                                        My focus laid on collecting, comparing and organizing data by writing Python scripts.
+                                        Zpeja.com - An online price comparison service which collects data by web scraping online stores.
+                                        My focus laid on collecting, comparing and organizing data with Python scripts.
                                         The project has continued after the course’s end.
                                     </div>
-                                    {/* <a href={repo.html_url} target="_blank" >
-                                        <h4 className={`${utilStyles.headingSm} ${utilStyles.forIconText}`}>
-                                            <GitHub style={{ paddingRight: "0.5rem" }} />
-                                                    GitHub repo
-                                                </h4>
-                                    </a> */}
                                 </div>
                             </div>
                         </div>

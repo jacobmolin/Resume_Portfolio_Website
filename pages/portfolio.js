@@ -47,49 +47,13 @@ function Portfolio({ repos, projectImages }) {
                     </a>
 
                     {/* THE REST OF THE PROJECTS */}
-                    {repos.map((repo, i) =>
-                        repo.homepage ? (
-                            <a className={styles.project} href={repo.homepage} key={repo.homepage} target="_blank">
-                                <div className={styles.projectContent}>
-                                    {(projectImages.includes(`${repo.name}.png`)) ? (
-                                        <img
-                                            src={`/images/projects/${repo.name}.png`}
-                                            className={styles.projectImage}
-                                            alt={repo.name}
-                                        />
-                                    ) : (
-                                            <img
-                                                src="/images/projects/placeholder.png"
-                                                className={styles.projectImage}
-                                                alt={repo.name}
-                                            />
-                                        )}
-                                    <div className={styles.imageOverlay} />
-                                    <div className={styles.textContainer}>
-                                        <h2 className={`${utilStyles.headingLg} ${styles.projHeading}`}>
-                                            {stringClean(repo.name)}
-                                        </h2>
-                                        <div className={styles.descLink}>
-                                            <div className={styles.description}>
-                                                {repo.description}
-                                                {/* <br /><br /> */}
-                                            </div>
-                                            <a href={repo.html_url} target="_blank" >
-                                                <h4 className={`${utilStyles.headingSm} ${utilStyles.forIconText}`}>
-                                                    <GitHub style={{ paddingRight: "0.5rem" }} />
-                                                    GitHub repo
-                                                </h4>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        ) : (
-                                // <Link href={repo.html_url} key={repo.html_url} >
-                                // <a className={styles.project} target="_blank">
-                                <a className={styles.project} href={repo.html_url} key={repo.html_url} target="_blank" >
+                    {repos.map((repo) =>
+                        repo.name != 'Resume_Portfolio_Website' && (
+
+                            repo.homepage ? (
+                                <a className={styles.project} href={repo.homepage} key={repo.homepage} target="_blank">
                                     <div className={styles.projectContent}>
-                                        {projectImages.includes(`${repo.name}.png`) ? (
+                                        {(projectImages.includes(`${repo.name}.png`)) ? (
                                             <img
                                                 src={`/images/projects/${repo.name}.png`}
                                                 className={styles.projectImage}
@@ -102,7 +66,7 @@ function Portfolio({ repos, projectImages }) {
                                                     alt={repo.name}
                                                 />
                                             )}
-                                        <div className={styles.imageOverlay}></div>
+                                        <div className={styles.imageOverlay} />
                                         <div className={styles.textContainer}>
                                             <h2 className={`${utilStyles.headingLg} ${styles.projHeading}`}>
                                                 {stringClean(repo.name)}
@@ -112,19 +76,58 @@ function Portfolio({ repos, projectImages }) {
                                                     {repo.description}
                                                     {/* <br /><br /> */}
                                                 </div>
-                                                <div>
-                                                    <a href={repo.html_url} target="_blank" >
-                                                        <h4 className={`${utilStyles.headingSm} ${utilStyles.forIconText}`}>
-                                                            <GitHub style={{ paddingRight: "0.5rem" }} />
-                                                                GitHub repo
-                                                            </h4>
-                                                    </a>
-                                                </div>
+                                                <a href={repo.html_url} target="_blank" >
+                                                    <h4 className={`${utilStyles.headingSm} ${utilStyles.forIconText}`}>
+                                                        <GitHub style={{ paddingRight: "0.5rem" }} />
+                                                    GitHub repo
+                                                </h4>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                            )
+                            ) : (
+                                    // <Link href={repo.html_url} key={repo.html_url} >
+                                    // <a className={styles.project} target="_blank">
+                                    <a className={styles.project} href={repo.html_url} key={repo.html_url} target="_blank" >
+                                        <div className={styles.projectContent}>
+                                            {projectImages.includes(`${repo.name}.png`) ? (
+                                                <img
+                                                    src={`/images/projects/${repo.name}.png`}
+                                                    className={styles.projectImage}
+                                                    alt={repo.name}
+                                                />
+                                            ) : (
+                                                    <img
+                                                        src="/images/projects/placeholder.png"
+                                                        className={styles.projectImage}
+                                                        alt={repo.name}
+                                                    />
+                                                )}
+                                            <div className={styles.imageOverlay}></div>
+                                            <div className={styles.textContainer}>
+                                                <h2 className={`${utilStyles.headingLg} ${styles.projHeading}`}>
+                                                    {stringClean(repo.name)}
+                                                </h2>
+                                                <div className={styles.descLink}>
+                                                    <div className={styles.description}>
+                                                        {repo.description}
+                                                        {/* <br /><br /> */}
+                                                    </div>
+                                                    <div>
+                                                        <a href={repo.html_url} target="_blank" >
+                                                            <h4 className={`${utilStyles.headingSm} ${utilStyles.forIconText}`}>
+                                                                <GitHub style={{ paddingRight: "0.5rem" }} />
+                                                                GitHub repo
+                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                )
+                        )
                     )}
                 </div>
             </div >
@@ -141,6 +144,7 @@ export async function getStaticProps() {
 
     if (resp.status == 200) {
         repos = await resp.json()
+        // console.log(repos)
     } else {
         console.error('Could not fetch data!')
         console.error(resp.status, resp.statusText)

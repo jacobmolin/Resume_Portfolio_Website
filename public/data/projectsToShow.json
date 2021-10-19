@@ -1,0 +1,12 @@
+{
+  "projects": [
+    "bachelor",
+    "enroute",
+    "Battleship_AI_Agent",
+    "diatot",
+    "TNM085-Boids",
+    "Trump_Tweet_Generator",
+    "VizWiz"
+  ],
+  "accounts": ["users/jacobmolin", "orgs/angelgravel"]
+}

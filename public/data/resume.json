@@ -1,269 +1,274 @@
 {
-    "basics": {
-        "name": "Jacob Molin",
-        "picture": "",
-        "currentTitel": "M.Sc. student in Media Tech. and Engineering",
-        "email": "jacob.cb.molin@gmail.com",
-        "phone": "073 032 25 79",
-        "location": "Norrköping / Stockholm, Sweden",
-        "degree": "",
-        "summary": ""
+  "basics": {
+    "name": "Jacob Molin",
+    "picture": "",
+    "currentTitel": "M.Sc. student in Media Tech. and Engineering",
+    "email": "jacob.cb.molin@gmail.com",
+    "phone": "073 032 25 79",
+    "location": "Norrköping / Stockholm, Sweden",
+    "degree": "",
+    "summary": ""
+  },
+  "links": [
+    {
+      "label": "JacobMolin.com",
+      "url": "https://jacobmolin.com"
     },
-    "links": [
-        {
-            "label": "JacobMolin.com",
-            "url": "https://jacobmolin.com"
-        },
-        {
-            "label": "GitHub",
-            "url": "https://github.com/jacobmolin"
-        },
-        {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/jacob-molin-488b1764/"
-        }
-    ],
-    "profile": "Driven, analytical and problem-solving-loving M.Sc. student with a big interest in technology, creation and logical thinking.",
-    "profile2": "With experience in music production, customer service and logistics I have a unique insight in working with and delivering results in teams with many different types of personalities. I'm curious, take initiatives and is always looking on how to improve products and workflows. I'm interested in exploring how technology, with the help of Artificial Intelligence, Machine Learning and programming in general, can be used to make life better and more fun for people. I thrive on new challenges and love making people laugh!",
-    "education": [
-        {
-            "school": "Linköping University",
-            "location": "Norrköping",
-            "startDate": "2017-09-01",
-            "endDate": "",
-            "degree": "M.Sc. in Media Technology and Engineering",
-            "degreeLevel": "Masters in Science",
-            "description": "Focus on programming and system development. Courses in Machine Learning, AI, Big Data Analytics, Neural Networks and more. Expected graduation June 2022. Current GPA: 4.13 / 5.0 (Grades are given in U, 3, 4, 5). Currently in my penultimate year.",
-            "bachelor": "Bachelor project:",
-            "subDescription": "In a group of seven where we researched implementation methods and developed an online price comparison service which collects data by web scraping online stores. My focus laid on collecting, comparing and organizing data by writing Python scripts. The project has continued after the course’s end (see more under Portfolio)."
-        },
-        {
-            "school": "UCLA Extension",
-            "location": "Westwood, CA, USA",
-            "startDate": "2013-03-01",
-            "endDate": "2014-06-01",
-            "degree": "Independent Music Production Certificate",
-            "degreeLevel": "Certificate",
-            "description": ""
-        },
-        {
-            "school": "Musicians Institute",
-            "location": "Hollywood, CA, USA",
-            "startDate": "2010-09-01",
-            "endDate": "2011-09-01",
-            "degree": "Audio Engineering Certificate (Music and Post Production Audio)",
-            "degreeLevel": "Certificate",
-            "description": ""
-        },
-        {
-            "school": "Åva Gymnasium",
-            "location": "Täby",
-            "startDate": "2006-08-01",
-            "endDate": "2009-06-01",
-            "degree": "Technical Programme, Innovation and Design",
-            "degreeLevel": "High School",
-            "description": ""
-        }
-    ],
-    "work": [
-        {
-            "company": "LiTHeHack, Linköping University",
-            "position": "Programming Tutor",
-            "location": "Norrköping",
-            "website": "",
-            "startDate": "2019-08-01",
-            "endDate": "2020-09-01",
-            "summary": "Employed by Linköping University to tutor students in programming during two sessions per week. Students drop in and ask programming-related questions. Most questions regarded C++, JavaScript and MATLAB.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Freelance",
-            "position": "Location / Production Assistant on film sets",
-            "location": "Stockholm",
-            "website": "",
-            "startDate": "2016-08-01",
-            "endDate": "2018-07-01",
-            "summary": "Setting up and maintaining film location sets as well as driving actors, crew and equipment to/from location for projects like \"Solsidan\" (movie) and \"Hassel\" (TV series).",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Freelance",
-            "position": "Audio Engineer / Music Producer",
-            "location": "Los Angeles / Stockholm",
-            "website": "",
-            "startDate": "2014-08-01",
-            "endDate": "2017-08-01",
-            "summary": "Recording and Audio Engineer for artists like Zara Larsson, Dua Lipa, Rev Run and Jared Leto. Music producer for artists like Broderick Batts, Taps and Diana Ebe.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "Hotels Viva",
-            "position": "Sound / Light Technician, Sports Entertainer",
-            "location": "Mallorca",
-            "website": "",
-            "startDate": "2012-04-01",
-            "endDate": "2012-11-01",
-            "summary": "Led sports activities for hotel guests during the day and running sound and light for the stage shows during the night for one season at a hotel on the Spanish island Mallorca.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "McDonald's",
-            "position": "Restaurant Clerk",
-            "location": "Täby",
-            "website": "",
-            "startDate": "2008-03-01",
-            "endDate": "2009-11-01",
-            "summary": "Full-time periodically and part-time during studies.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "company": "",
-            "position": "Various summer and part time jobs",
-            "location": "Stockholm / Norrköping",
-            "website": "",
-            "startDate": "2006-06-01",
-            "endDate": "",
-            "summary": "Like store clerk at Hemköp (present), outdoor cinema technician, janitor and warehouse worker.",
-            "highlights": [
-                ""
-            ]
-        }
-    ],
-    "commissionOfTrust": [
-        {
-            "position": "Auditor",
-            "entity": "NAFFI (Norrköping’s Academic Sports Association)",
-            "location": "Norrköping",
-            "website": "naffi.nu",
-            "startDate": "2020-05-01",
-            "endDate": "2021-05-01",
-            "summary": "As one of two auditors, being responsible for auditing the accounting and financial situation of NAFFI for the academic year 2019/2020.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "position": "Chairman",
-            "entity": "NAFFI (Norrköping’s Academic Sports Association)",
-            "location": "Norrköping",
-            "website": "naffi.nu",
-            "startDate": "2018-05-01",
-            "endDate": "2019-05-01",
-            "summary": "I was responsible for running board meetings and ultimately responsible for the weekly and overall operations.",
-            "highlights": [
-                ""
-            ]
-        }
-    ],
-    "Projects in and outside of studies": [
-        {
-            "name": "Media Technology - Bachelor Project",
-            "location": "Linköping University",
-            "website": "",
-            "startDate": "01-2020",
-            "endDate": "06-2020",
-            "summary": "In a group of seven where we researched implementation methods and developed an online clothing price comparison service which collects data through webscraping online clothing stores. My focus laid on collecting, comparing and organizing data. Implemented in Python.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "name": "Project in the course \"Audio Physics\"",
-            "location": "Linköping University",
-            "website": "",
-            "startDate": "09-2019",
-            "endDate": "11-2019",
-            "summary": "Developed, in a group of three, an online frequency spectrum analyzer with JavaScript and React.",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "name": "Project in the course \"Communication and User Interface\"",
-            "location": "Linköping University",
-            "website": "",
-            "startDate": "10-2018",
-            "endDate": "01-2019",
-            "summary": "With focus on the user interface, the group of four developed an application for diabetics to log the blood sugar and carbohydrate intake to calculate a bolus dose of insulin. The goal was to simplify the everyday life of diabetics and letting them spend less time managing their disease. The application was developed as a mobile phone adapted website using with JavaScript, React and Node,js and was named \"diatot\".",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "name": "Project in the course \"Machine Learning for Social Media\"",
-            "location": "Linköping University",
-            "website": "",
-            "startDate": "11-2020",
-            "endDate": "01-2021",
-            "summary": "SKRIIIIIV HÄÄÄR",
-            "highlights": [
-                ""
-            ]
-        },
-        {
-            "name": "Resume and portfolio website: jacobmolin.com",
-            "location": "",
-            "website": "jacobmolin.com",
-            "startDate": "10-2020",
-            "endDate": "11-2020",
-            "summary": "Developed my own resume and portfolio website for fun! Implemented with React and Next.js",
-            "highlights": [
-                ""
-            ]
-        }
-    ],
-    "internships": [
-        {
-            "company": "",
-            "position": "Recording / Audio Engineer intern",
-            "location": "Los Angeles",
-            "website": "",
-            "startDate": "2011-06-01",
-            "endDate": "2014-12-01",
-            "summary": "Various recording / audio engineer internships in professional studios with international producers and songwriters like Al Shux (Jay-Z, Alicia Keys) and David Jost (Selena Gomez, Tokio Hotel). Among many things, I recorded A-list artists, built a vocal booth and rewired an entire studio.",
-            "highlights": [
-                ""
-            ]
-        }
-    ],
-    "skills": [
-        {
-            "name": "Programming languages",
-            "level": "",
-            "keywords": [
-                "C++",
-                "JavaScript",
-                "Python",
-                "Java",
-                "MATLAB",
-                "Git"
-            ]
-        }
-    ],
-    "languages": [
-        {
-            "language": "Swedish",
-            "fluency": "Native"
-        },
-        {
-            "language": "English",
-            "fluency": "Fluent"
-        },
-        {
-            "language": "French",
-            "fluency": "Working on it"
-        }
-    ],
-    "interests": "Playing and listening to music, exercising, experiencing nature, listening to podcasts.",
-    "references": "References available upon request"
+    {
+      "label": "GitHub",
+      "url": "https://github.com/jacobmolin"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/jacob-molin-488b1764/"
+    }
+  ],
+  "profile": "Driven, analytical and problem-solving-loving M.Sc. student with a big interest in technology, creation and logical thinking.",
+  "profile2": "With experience in music production, customer service and logistics I have a unique insight in working with and delivering results in teams with many different types of personalities. I'm curious, take initiatives and I'm always looking on how to improve products and workflows. I'm interested in exploring how technology, with the help of Artificial Intelligence, Machine Learning and programming in general, can be used to make life better and more fun for people. I thrive on new challenges and love making people laugh!",
+  "education": [
+    {
+      "school": "Linköping University",
+      "location": "Norrköping",
+      "startDate": "2017-09-01",
+      "endDate": "",
+      "degree": "M.Sc. in Media Technology and Engineering",
+      "degreeLevel": "Masters in Science",
+      "description": "Focus on programming and system development. Courses in Web Programming, Algorithmic Problem Solving, Neural Networks, Machine Learning, AI and more. Expected graduation June 2022.",
+      "bachelor": "Bachelor project:",
+      "subDescription": "In an agile team of seven where we researched implementation methods and developed an online price comparison service which collects data by web scraping online stores. We worked according to Scrum and my focus laid on collecting, comparing and organizing data by writing Python scripts."
+    },
+    {
+      "school": "UCLA Extension",
+      "location": "Westwood, CA, USA",
+      "startDate": "2013-03-01",
+      "endDate": "2014-06-01",
+      "degree": "Independent Music Production Certificate",
+      "degreeLevel": "Certificate",
+      "description": ""
+    },
+    {
+      "school": "Musicians Institute",
+      "location": "Hollywood, CA, USA",
+      "startDate": "2010-09-01",
+      "endDate": "2011-09-01",
+      "degree": "Audio Engineering Certificate (Music and Post Production Audio)",
+      "degreeLevel": "Certificate",
+      "description": ""
+    },
+    {
+      "school": "Åva Gymnasium",
+      "location": "Täby",
+      "startDate": "2006-08-01",
+      "endDate": "2009-06-01",
+      "degree": "Technical Programme, Innovation and Design",
+      "degreeLevel": "High School",
+      "description": ""
+    }
+  ],
+  "work": [
+    {
+      "company": "Gaia",
+      "position": "Software Developer",
+      "location": "Norrköping",
+      "website": "https://gaia.se/",
+      "startDate": "2021-06-07",
+      "endDate": "",
+      "summary": "Summer internship and part time during studies. The internship was based on two use cases involving automatic re-routing of bus traffic and speech-to-text tools control for bus drivers. I learned techniques like Docker, Azure, Angular, Valhalla Routing and OpenStreetMap as well as working in an agile team. During the fall I’ve continued working with automatic position data generation in Python and C#.",
+      "highlights": [""]
+    },
+    {
+      "company": "LiTHeHack, Linköping University",
+      "position": "Programming Tutor",
+      "location": "Norrköping",
+      "website": "",
+      "startDate": "2019-08-01",
+      "endDate": "2020-06-01",
+      "summary": "Employed by Linköping University to tutor students in programming during two sessions per week. Students drop in and ask programming-related questions. Most questions regarded C++, JavaScript and MATLAB.",
+      "highlights": [""]
+    },
+    {
+      "company": "Freelance",
+      "position": "Location / Production Assistant on film sets",
+      "location": "Stockholm",
+      "website": "",
+      "startDate": "2016-08-01",
+      "endDate": "2018-07-01",
+      "summary": "Setting up and maintaining film location sets for projects like \"Solsidan\" and \"Hassel\". Developed skills in managing multiple issues at once and running my own company.",
+      "highlights": [""]
+    },
+    {
+      "company": "Freelance",
+      "position": "Audio Engineer / Music Producer",
+      "location": "Los Angeles / Stockholm",
+      "website": "",
+      "startDate": "2014-08-01",
+      "endDate": "2017-08-01",
+      "summary": "Audio engineer for artists like Zara Larsson, Dua Lipa, Rev Run and Jared Leto. Music producer for artists like Broderick Batts, Taps and Diana Ebe. I learned how to work in and lead teams of very different minded people towards a common goal.",
+      "highlights": [""]
+    },
+    {
+      "company": "Hotels Viva",
+      "position": "Sound / Light Technician, Sports Entertainer",
+      "location": "Mallorca, Spain",
+      "website": "",
+      "startDate": "2012-04-01",
+      "endDate": "2012-11-01",
+      "summary": "By leading sports activities for hotel guests during the day and running sound / light for stage shows at night I developed my skills in providing great customer service.",
+      "highlights": [""]
+    },
+    {
+      "company": "McDonald's",
+      "position": "Restaurant Clerk",
+      "location": "Täby",
+      "website": "",
+      "startDate": "2008-03-01",
+      "endDate": "2009-11-01",
+      "summary": "Full-time periodically and part-time during studies.",
+      "highlights": [""]
+    },
+    {
+      "company": "",
+      "position": "Various summer and part time jobs",
+      "location": "Stockholm / Norrköping",
+      "website": "",
+      "startDate": "2006-06-01",
+      "endDate": "2021-06-01",
+      "summary": "Like store clerk at Hemköp during university studies, outdoor cinema technician, janitor and warehouse worker.",
+      "highlights": [""]
+    }
+  ],
+  "commissionOfTrust": [
+    {
+      "position": "Auditor",
+      "entity": "NAFFI (Norrköping’s Academic Sports Association)",
+      "location": "Norrköping",
+      "website": "naffi.nu",
+      "startDate": "2020-05-01",
+      "endDate": "2021-05-01",
+      "summary": "As one of two auditors, being responsible for auditing the accounting and financial situation of NAFFI for the academic year 2019/2020.",
+      "highlights": [""]
+    },
+    {
+      "position": "Chairman",
+      "entity": "NAFFI (Norrköping’s Academic Sports Association)",
+      "location": "Norrköping",
+      "website": "naffi.nu",
+      "startDate": "2018-05-01",
+      "endDate": "2019-05-01",
+      "summary": "I was responsible for running board meetings and ultimately responsible for the weekly and overall operations. I learned how to be responsible for a team and making sure all work was on track.",
+      "highlights": [""]
+    }
+  ],
+  "Projects in and outside of school": [
+    {
+      "name": "Media Technology - Bachelor Project",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "01-2020",
+      "endDate": "06-2020",
+      "summary": "In a group of seven where we researched implementation methods and developed an online clothing price comparison service which collects data through webscraping online clothing stores. My focus laid on collecting, comparing and organizing data. Implemented in Python.",
+      "highlights": [""]
+    },
+    {
+      "name": "Battleship AI Agent – Project in the course \"AI for Interactive Media\"",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "09-2021",
+      "endDate": "11-2021",
+      "summary": "Together with two fellow students we’re now developing an AI agent to solve the game Battleship using a Convolutional Neural Network. We’re using Python and TensorFlow to implement the agent. Go to [github.com/jacobmolin/battleship_ai_agent](github.com/jacobmolin/battleship_ai_agent) to see the GitHub repo.",
+      "highlights": [""]
+    },
+    {
+      "name": "EnRoute – Project in the course \"Advanced Web Programming\"",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "03-2021",
+      "endDate": "06-2021",
+      "summary": "Together with two fellow students we built an online version of the board game \"Ticket to Ride\". We used techniques like Node.js, React, Socket.io. See the GitHub repo with link to demo at [github.com/angelgravel/enroute](github.com/angelgravel/enroute).",
+      "highlights": [""]
+    },
+    {
+      "name": "Project in the course \"Audio Physics\"",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "09-2019",
+      "endDate": "11-2019",
+      "summary": "Developed, in a group of three, an online frequency spectrum analyzer with JavaScript and React.",
+      "highlights": [""]
+    },
+    {
+      "name": "Project in the course \"Communication and User Interface\"",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "10-2018",
+      "endDate": "01-2019",
+      "summary": "With focus on the user interface, the group of four developed an application for diabetics to log the blood sugar and carbohydrate intake to calculate a bolus dose of insulin. The goal was to simplify the everyday life of diabetics and letting them spend less time managing their disease. The application was developed as a mobile phone adapted website using with JavaScript, React and Node,js and was named \"diatot\".",
+      "highlights": [""]
+    },
+    {
+      "name": "Project in the course \"Machine Learning for Social Media\"",
+      "location": "Linköping University",
+      "website": "",
+      "startDate": "11-2020",
+      "endDate": "01-2021",
+      "summary": "SKRIIIIIV HÄÄÄR",
+      "highlights": [""]
+    },
+    {
+      "name": "Resume and portfolio website: jacobmolin.com",
+      "location": "",
+      "website": "jacobmolin.com",
+      "startDate": "10-2020",
+      "endDate": "11-2020",
+      "summary": "Developed my own resume and portfolio website for fun! Implemented with React and Next.js",
+      "highlights": [""]
+    }
+  ],
+  "internships": [
+    {
+      "company": "",
+      "position": "Recording / Audio Engineer intern",
+      "location": "Los Angeles",
+      "website": "",
+      "startDate": "2011-06-01",
+      "endDate": "2014-12-01",
+      "summary": "Various recording / audio engineer internships in professional studios with international producers and songwriters like Al Shux (Jay-Z, Alicia Keys) and David Jost (Selena Gomez, Tokio Hotel). Among many things, I recorded A-list artists, built a vocal booth and rewired an entire studio.",
+      "highlights": [""]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming languages",
+      "level": "",
+      "keywords": [
+        "C++",
+        "Python",
+        "React",
+        "Angular",
+        "JavaScript",
+        "Docker",
+        "SQL",
+        "Java",
+        "MATLAB",
+        "C#",
+        "Git"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Swedish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "French",
+      "fluency": "Working on it"
+    }
+  ],
+  "interests": "Playing and listening to music, exercising, experiencing nature, listening to podcasts.",
+  "references": "References available upon request"
 }

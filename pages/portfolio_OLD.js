@@ -5,7 +5,6 @@ import styles from "../styles/Portfolio.module.css";
 import utilStyles from "../styles/utils.module.css";
 import stringClean from "../utils/stringClean.js";
 import GitHub from "@material-ui/icons/GitHub";
-import projectsToShow from "../public/data/projectsToShow";
 
 export const site = "Portfolio";
 
@@ -52,7 +51,7 @@ function Portfolio({ repos, projectImages }) {
           {/* THE REST OF THE PROJECTS */}
           {repos.map(
             (repo) =>
-              projectsToShow.projects.indexOf(repo.name) > -1 &&
+              repo.name != "Resume_Portfolio_Website" &&
               (repo.homepage ? (
                 <a
                   className={styles.project}
@@ -158,27 +157,20 @@ function Portfolio({ repos, projectImages }) {
 export default Portfolio;
 
 export async function getStaticProps() {
+  const resp = await fetch(
+    "https://api.GitHub.com/users/jacobmolin/repos?per_page=50"
+  );
+  let repos = [];
   const projectImagesDir = path.join(process.cwd(), "public/images/projects");
   const projectImages = fs.readdirSync(projectImagesDir);
-  // let repos = [];
-  const reposResponses = await Promise.all(
-    projectsToShow.accounts.map((account) =>
-      fetch("https://api.GitHub.com/" + account + "/repos?per_page=50")
-    )
-  );
 
-  const repos = (
-    await Promise.all(
-      reposResponses.map((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        } else {
-          console.error("Could not fetch data!");
-          console.error(resp.status, resp.statusText);
-        }
-      })
-    )
-  ).flat();
+  if (resp.status == 200) {
+    repos = await resp.json();
+    // console.log(repos)
+  } else {
+    console.error("Could not fetch data!");
+    console.error(resp.status, resp.statusText);
+  }
 
   return {
     props: {
